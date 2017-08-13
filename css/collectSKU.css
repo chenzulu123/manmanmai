@@ -166,36 +166,41 @@
     width: 50%;
     padding: 4px;
     position: relative;
-  transition: all .5s;
+    transition: all .5s;
 }
-.box ul li:hover{
-  transform: scale(0.9);
-  box-shadow: 0 0 40px lightslategray;
-  border-radius: 20px;
+
+.box ul li:hover {
+    transform: scale(0.9);
+    box-shadow: 0 0 40px lightslategray;
+    border-radius: 20px;
 }
-.box ul li:hover .one{
-  width: 108%;
-  height: 3px;
-  top: -5%;
-  left: -4%;
+
+.box ul li:hover .one {
+    width: 108%;
+    height: 3px;
+    top: -5%;
+    left: -4%;
 }
-.box ul li:hover .two{
-   width: 3px;
-  height: 111%;
-  top: -5%;
-  left: 104%;
+
+.box ul li:hover .two {
+    width: 3px;
+    height: 111%;
+    top: -5%;
+    left: 104%;
 }
-.box ul li:hover .three{
-  width: 108%;
-  height: 3px;
-  top: 105%;
-  left: -4%;
+
+.box ul li:hover .three {
+    width: 108%;
+    height: 3px;
+    top: 105%;
+    left: -4%;
 }
-.box ul li:hover .four{
-  width: 3px;
-  height: 109%;
-  top: -4%;
-  left: -4%;
+
+.box ul li:hover .four {
+    width: 3px;
+    height: 109%;
+    top: -4%;
+    left: -4%;
 }
 
 .box ul i {
@@ -206,18 +211,22 @@
     left: 50%;
     transition: all .5s;
 }
-  .box ul .one{
-     background: linear-gradient(to right, lightslategray 10%, transparent 10%, transparent 90%, lightslategray 90%);
-  }
-  .box ul .two{
-     background: linear-gradient(to bottom, lightslategray 10%, transparent 10%, transparent 90%, lightslategray 90%);
-  }
-  .box ul .three{
-     background: linear-gradient(to right, lightslategray 10%, transparent 10%, transparent 90%, lightslategray 90%);
-  }
-  .box ul .four{
-     background: linear-gradient(to bottom, lightslategray 10%, transparent 10%, transparent 90%, lightslategray 90%);
-  }
+
+.box ul .one {
+    background: linear-gradient(to right, lightslategray 10%, transparent 10%, transparent 90%, lightslategray 90%);
+}
+
+.box ul .two {
+    background: linear-gradient(to bottom, lightslategray 10%, transparent 10%, transparent 90%, lightslategray 90%);
+}
+
+.box ul .three {
+    background: linear-gradient(to right, lightslategray 10%, transparent 10%, transparent 90%, lightslategray 90%);
+}
+
+.box ul .four {
+    background: linear-gradient(to bottom, lightslategray 10%, transparent 10%, transparent 90%, lightslategray 90%);
+}
 
 .box ul li a {
     display: block;

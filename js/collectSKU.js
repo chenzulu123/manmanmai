@@ -124,11 +124,6 @@ function setInter() {
 
 	}, 10)
 };
-// $('#gotop').tap(function () {
-// }); //触摸事件  
-// $('.backTop').tap(function () {
-//     setInter();
-// });
 //获取页面被卷曲的部分
 function scroll() {
 	return { //只需要获取被上面卷曲的部分

@@ -100,7 +100,7 @@ ul {
 .container .cu-list ul li:hover {
   transform: scale(0.9);
   border-radius: 20px;
-  box-shadow: 0  0  12px #666;
+  box-shadow: 0 0 12px #666;
 }
 .container .cu-list ul li .one,
 .container .cu-list ul li .two,

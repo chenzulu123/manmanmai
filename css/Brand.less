@@ -1,260 +1,237 @@
 // 初始化开始
-@import 'media .less';
-@font-face {font-family: 'iconfont';
+@font-face {
+    font-family: 'iconfont';
     src: url('../font/iconfont.eot');
-    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
-    url('../font/iconfont.woff') format('woff'),
-    url('../font/iconfont.ttf') format('truetype'),
-    url('../font/iconfont.svg#iconfont') format('svg');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
 }
-.iconfont{
-  font-family:"iconfont" !important;
-  font-size:16px;font-style:normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-     font-style:normal
+    font-style: normal
 }
- 
+
 a {
     text-decoration: none;
-    display: block; // -webkit-tap-highlight-color: transparent;
+    display: block;
     color: inherit;
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-input{
-    outline:none;
+
+input {
+    outline: none;
 }
+
 img {
-    // width: 100%;
     /*  清除3px */
     display: block;
 }
-body{
+
+body {
     background-color: #f2f2f2;
 }
-.clearfix::after{
-  display: block;
-  content: "";
-  height: 0;
-  clear: both;
+
+.clearfix::after {
+    display: block;
+    content: "";
+    height: 0;
+    clear: both;
 }
+
 // 初始化结束
 //////////////  头部开始 ///////////////////
 // 顶部log
-.top-log{
-background-color: #ff841d;
-height: 50px;
-border-bottom: 1px solid #e6e6e6;
-// 左侧log
-.log{
-    width: 75%;
-    margin-left: 5px;
-    float: left;
-    padding: 12px;
-    a{
-        display: block;
-        height: 100%;
-        img{
-               max-height: 25px;
-               overflow: hidden;
+.top-log {
+    background-color: #ff841d;
+    height: 50px;
+    border-bottom: 1px solid #e6e6e6; // 左侧log
+    .log {
+        width: 75%;
+        margin-left: 5px;
+        float: left;
+        padding: 12px;
+        a {
+            display: block;
+            height: 100%;
+            img {
+                max-height: 25px;
+                overflow: hidden;
+            }
+        }
+    } // 右侧APP
+    .app {
+        float: right;
+        padding: 7px;
+        a {
+            img {
+                overflow: hidden;
+                max-height: 34px;
+            }
         }
     }
-}
-// 右侧APP
-.app{
-    float: right;
-    padding: 7px;
-    a{
-        img{
-            overflow: hidden;
-            max-height: 34px;
-        }
-    }
-}
 }
 
 // 顶部搜索
-.search{
+.search {
     border-bottom: 1px solid #e6e6e6;
     height: 50px;
     padding: 10px;
     position: relative;
     background-color: White;
-    .search-txt{
-        input{
-                -webkit-appearance: none;
-    border: none;
-    background: #f1f1f1;
-    margin: 0px;
-    padding: 0px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 15px;
-    padding-left: 10px;
-    position: absolute;
-    top: 10px;
-    width: 90%;
-    padding-left: 5%;
-    font-size: 16px;
+    .search-txt {
+        input {
+            -webkit-appearance: none;
+            border: none;
+            background: #f1f1f1;
+            margin: 0px;
+            padding: 0px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 15px;
+            padding-left: 10px;
+            position: absolute;
+            top: 10px;
+            width: 90%;
+            padding-left: 5%;
+            font-size: 16px;
         }
     }
-    .search-btn{
-        input{
-               -webkit-appearance: none;
-    width: 63px;
-    background: #ff841d;
-    color: #FFFFFF;
-    border: none;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 15px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 16px; 
+    .search-btn {
+        input {
+            -webkit-appearance: none;
+            width: 63px;
+            background: #ff841d;
+            color: #FFFFFF;
+            border: none;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 15px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
         }
     }
 }
+
 //////////////// 头部结束 ////////////////////
-
 // 主体开始
-
 // 导航开始
-.nav{
-   height: 36px;
-    background-color: #f5f5f5; 
+.nav {
+    height: 36px;
+    background-color: #f5f5f5;
     border-top: solid 1px #ebebeb;
     border-bottom: 1px solid #ccc;
     line-height: 36px;
     padding-left: 8px;
     font-size: 14px;
-    a{
+    a {
         float: left;
         color: #5a5a5a;
     }
 }
+
 // 导航结束
-
-
 // 品牌排行开始
-.main-body{
+.main-body {
     padding: 10px;
-    .Title{
-    font-size: 16px;
-    color: #874604;
-    height: 40px;
-    padding-left: 10px;
-    line-height: 40px;
-    margin: 10px 5px;
-    border: 1px solid #ccc;
-    background-color: #eee;
-    }
-// 品牌排行结束
-
-
-// 排行列表开始
-    .list{
-        .fl-t{
-
-            a{
-    height: 40px;
-    background: url(http://www.zuyushop.com/wap/images/arrow1.gif) right center no-repeat;
-    line-height: 40px;
-    color: #000;
-    font-size: 16px;
-    display: block;
-    padding-left: 10px;
-    border-bottom: 1px solid #ccc;
-     font-weight: bold;
+    .Title {
+        font-size: 16px;
+        color: #874604;
+        height: 40px;
+        padding-left: 10px;
+        line-height: 40px;
+        margin: 10px 5px;
+        border: 1px solid #ccc;
+        background-color: #eee;
+    } // 品牌排行结束
+    // 排行列表开始
+    .list {
+        .fl-t {
+            a {
+                height: 40px;
+                background: url(http://www.zuyushop.com/wap/images/arrow1.gif) right center no-repeat;
+                line-height: 40px;
+                color: #000;
+                font-size: 16px;
+                display: block;
+                padding-left: 10px;
+                border-bottom: 1px solid #ccc;
+                font-weight: bold;
             }
-  
+        }
+    } // 排行列表结束
+}
+
+// 主体结束
+// 底部登录开始
+.bottom {
+    .Login {
+        background: #efefef;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        height: 34px;
+        line-height: 34px;
+        margin-top: 25px;
+        clear: both;
+        a {
+            box-sizing: border-box;
+            float: left;
+            font-size: 14px;
+            border-right: 1px solid #c4c4c4;
+            text-align: center;
+            width: 30%;
+        }
+        a:nth-child(3) {
+            width: 40%;
+            border: 0;
+            text-align: center;
+            float: left;
+            font-size: 14px;
+            position: relative;
+            img {
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                left: 35px;
+                top: 10px;
+            }
         }
     }
-    // 排行列表结束
 }
-// 主体结束
-
-
-// 底部登录开始
-
-.bottom{
-    .Login{
-     background: #efefef;
-    border-top: 1px solid #c4c4c4;
-    border-bottom: 1px solid #c4c4c4;
-    height: 34px;
-    line-height: 34px;
-    margin-top: 25px;
-    clear: both;
-    a{
-    box-sizing: border-box;
-    float: left;
-    font-size: 14px;
-    border-right: 1px solid #c4c4c4;
-    text-align: center;
-    width: 30%;
-    }
-   a:nth-child(3){
-    width: 40%;
-    border: 0;
-    text-align: center;
-    float: left;
-    font-size: 14px;
-    position: relative;
-     img{
-         width: 15px;
-         height: 15px;
-        position: absolute;
-        left: 35px;
-        top: 10px;  
-  
-    }
-    }
-    }
-}
-
 
 // 底部登录结束
-
-
-
-
-
-
 // 友情链接开始
-
-.footer{
+.footer {
     background: #efefef;
     text-align: center;
     font-size: 12px;
     padding: 15px 0;
     color: #666;
-    p:nth-child(1){
-        a{
+    p:nth-child(1) {
+        a {
             float: left;
             margin: 5px;
         }
-        a:nth-child(1){
+        a:nth-child(1) {
             float: left;
             margin-left: 90px;
             color: red;
         }
     }
-    p:nth-child(2){
+    p:nth-child(2) {
         font-size: 14px;
     }
 }
 
 // 友情链接结束
-
-
-
-
-
-

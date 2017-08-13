@@ -20,7 +20,7 @@ h6,
 form,
 fieldset,
 legend,
-img{
+img {
     margin: 0;
     padding: 0;
     /*清除元素的内外边距*/
@@ -123,9 +123,10 @@ input[type="reset"] {
     border-radius: 0;
 }
 
-a{
-      -webkit-tap-highlight-color:transparent;  
+a {
+    -webkit-tap-highlight-color: transparent;
 }
+
 h1,
 h2,
 h3,
@@ -146,6 +147,7 @@ em {
     text-decoration: none;
     /*去掉下划线或是删除线*/
 }
+
 
 /*公共类*/
 
