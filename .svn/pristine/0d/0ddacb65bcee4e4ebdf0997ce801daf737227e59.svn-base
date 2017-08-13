@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>index.html</title>
+   <script src="../lib/zepto/zepto.js"></script>
+  <script src="../lib/zepto/event.js"></script>
+  <script src="../lib/zepto/touch.js"></script>
+  <script src="../lib/zepto/ajax.js"></script>
+  <script src="../lib/zepto/fx.js"></script>
+  <script src="../lib/zepto/fx_methods.js"></script> 
+  <link rel="stylesheet" href="../css/media.css">
+  <link rel="stylesheet" href="../css/price_compare.css">
+   <link rel="stylesheet" href="../css/common.css"> 
+  <script src="../lib/template-web.js"></script>
+  <script src="../js/price_compare.js"></script>
+</head>
+
+<body>
+  <!-- classify-->
+  <div class="brief">
+    <div class="brief_in">
+      <ul id="template_load">
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script type="text/html" id="temp1">
+  {{each result}}
+  <li class="fl_t">
+    <div class="title">
+      <span>{{$value.title}}</span>
+      <span class="iconfont fr">&#xe692;</span>
+    </div>
+    <div class="content">
+      <ul class="clearfix" categoryId="{{$value.titleId}}">
+      </ul>
+    </div>
+  </li>
+  {{/each}}
+</script>
+<script type="text/html" id="temp2">
+  {{each result}}
+  <li><a class="category" categoryId='{{$value.categoryId}}' href="./product_list.html">{{$value.category}}</a></li>
+  {{/each}}
+</script>
+
+<script>
+</script>

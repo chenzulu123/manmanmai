@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maxinum-scale=1.0,mininum=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/storeNav.css">
+</head>
+
+<body>
+    <header class="storeNav_header">
+        <a href="javascript:;" class="iconfont back">&#xf0343;</a>
+        <a href="javascript:;" class="appDown"><img src="./images/header_app.png" alt=""></a>
+        <h1>商城导航</h1>
+    </header>
+    <div class="mask">
+        <div class="spinner">
+            <div class="spinner-container container1">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container2">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+        </div>
+    </div>
+    <main class="main">
+        <div class="storeName">
+            <script type="text/html" id="template">
+                {{each result}}
+                <a href="{{$value.navHref}}"><img src="{{$value.navImg}}" alt="">{{$value.navTitle}}</a> {{/each}}
+            </script>
+
+
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="nav">
+            <a href="javascript:;">&nbsp;&nbsp;首页</a>&nbsp;><a href="javascript:;">&nbsp;商城导航</a>
+        </div>
+        <div class="login">
+            <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+            <a href="#" class="backTop"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+        </div>
+        <div class="info">
+            <p><a href="javascript:;">手机APP下载</a> <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+</body>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/template-web.js"></script>
+<script src="./js/storeNav.js"></script>
+
+</html>

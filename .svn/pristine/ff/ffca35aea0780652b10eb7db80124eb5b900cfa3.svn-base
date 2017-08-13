@@ -1,0 +1,347 @@
+@import "base.less";
+.head {
+    background-color: #ff841d;
+    width: 100%;
+    height: 44px;
+    position: relative;
+    .back {
+        height: 100%;
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        width: 100%;
+        a {
+            display: block;
+            width: 50px;
+            height: 44px;
+            font-size: 18px;
+            line-height: 44px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+    h1 {
+        font-size: 20px;
+        color: white;
+        line-height: 44px;
+        text-align: center;
+        margin: 0px;
+    }
+    .home {
+        height: 100%;
+        width: 50px;
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        padding: 7px 10px;
+        overflow: hidden;
+        a {
+            display: block;
+            text-decoration: none;
+            width: 50px;
+            height: 44px;
+            background: url("../images/header_app.png") no-repeat;
+            background-size: 32px 32px;
+        }
+    }
+}
+
+
+/*主体部分*/
+
+.container {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    .cu-list ul li {
+        position: relative;
+        padding: 14px 8px;
+        height: 128px;
+        overflow: hidden;
+        transition: all .5s;
+        &:hover{
+            transform: scale(.9);
+            // box-shadow: 0  0  12px #666;
+        }
+        // i{
+        //     position: absolute;
+        //     z-index: 9999;
+        // }
+        // .one{
+        //     width: 0;
+        //     height: 3px;
+        //     background-color: pink;
+        //     top: 0;
+        //     left: 0;
+        //     transition: all .2s;
+            
+        // }
+        // .two{
+        //     width: 3px;
+        //     height: 0;
+        //     background-color: pink;
+        //     top: 0;
+        //     right: 0;
+        //     transition: all .2s .2s;
+            
+        // }
+        // .three{
+        //     width: 0;
+        //     height: 3px;
+        //     background-color: pink;
+        //     bottom: 0;
+        //     right: 0;
+        //     transition: all .2s .4s;
+            
+        // }
+        // .four{
+        //     width: 3px;
+        //     height: 0;
+        //     background-color: pink;
+        //     bottom: 0;
+        //     left: 0;
+        //     transition: all .2s .6s;
+            
+        // }
+        // &:hover .one{
+        //     width: 100%;
+
+            
+        // }
+        // &:hover .two{
+        //     height: 100%;
+            
+        // }
+        // &:hover .three{
+        //     width: 100%;
+            
+        // }
+        // &:hover .four{
+        //     height: 100%;
+            
+        // }
+        .one,.two,.three,.four{
+            position: absolute;
+            width: 0;
+            height: 0;
+            background-color: #ccc;
+            opacity: .2;
+            transition: all .5s;
+            z-index: 9999;
+        }
+        .one{
+            top: 0;
+            left: 0;
+        }
+        .two{
+            top: 0;
+            right: 0;
+        }
+        .three{
+            bottom: 0;
+            right: 0;
+        }
+        .four{
+            bottom: 0;
+            left: 0;
+        }
+        &:hover .one{
+            width: 50%;
+            height: 50%;
+        }
+        &:hover .two{
+            width: 50%;
+            height: 50%;
+        }
+        &:hover .three{
+            width: 50%;
+            height: 50%;
+        }
+        &:hover .four{
+            width: 50%;
+            height: 50%;
+        }
+        // &::before{
+        //     content: 'Pain is temporary.Quitting lasts forever.';
+        //     // opacity:0;
+        //     width: 0;
+        //     height: 0;
+        //     position: absolute;
+        //     background-color: pink;
+        //     top: 50%;
+        //     left: 50%;
+        //     z-index: 9999;
+        //     transition: all .5s;
+        //     text-align: center;
+        //     line-height: 500px;
+        // }
+        // &:hover:before{
+        //     transform: scale(500);
+        //     opacity: .5;
+        //     width: 100%;
+        //     height: 100%;
+        // }
+        
+        a {
+            display: block;
+            width: 100%;
+            height: 100px;
+            padding-left: 110px;
+            .pic {
+                position: absolute;
+                left: 0;
+                width: 110px;
+                img {
+                    width: 100px;
+                    height: 100px;
+                    vertical-align: middle;
+                }
+            }
+            .info {
+                height: 57px;
+                ;
+                width: 100%;
+                color: #333;
+                font-size: 15px;
+                line-height: 19px;
+                text-align: left;
+                .title span {
+                    color: #ff6c00;
+                }
+                .other {
+                    margin-top: 10px;
+                    color: #a1a1a1;
+                    font-size: 12px;
+                    .comment {
+                        font-size: 12px;
+                        line-height: 16px;
+                        i {
+                            margin-right: 3px;
+                            font-size: 14px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*底部分页*/
+    .page {
+        width: 100%;
+        padding: 20px 0;
+        background-color: #f2f2f2;
+        position: relative;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        input {
+            width: 83px;
+            height: 33px;
+            border: 1px solid #cbcbcb;
+            background-color: #ddd;
+            border-radius: 5px;
+            outline: none;
+            cursor: not-allowed
+        }
+        select {
+            margin: 0 auto;
+            height: 33px;
+            width: 130px;
+            padding-left: 40px;
+            font-size: 16px; // text-align: center;
+        }
+        .prev {
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        .next {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+        }
+    }
+}
+
+.foot_menu {
+    height: 36px;
+    padding-left: 8px;
+    background-color: #f4f4f4;
+    line-height: 36px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    a {
+        display: inline;
+    }
+}
+
+
+/*底部 部分*/
+
+.footerApp {
+    padding-top: 25px;
+    background-color: #f2f2f2;
+    .foot_top {
+        background: #efefef;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        height: 34px;
+        line-height: 34px;
+        a {
+            width: 30%;
+            float: left;
+            text-align: center;
+            font-size: 14px;
+            border-right: 1px solid #c4c4c4;
+            img {
+                width: 15px;
+                height: 15px;
+                border: none;
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: -5px;
+                margin-right: 2px;
+            }
+        }
+        a:last-child {
+            width: 40%;
+            border-right: none;
+        }
+    }
+    .footer {
+        font-size: 12px;
+        color: #666;
+        padding: 15px 0;
+        p {
+            text-align: center;
+            a {
+                display: inline;
+            }
+            a:first-child {
+                color: red;
+            }
+            a:last-child {
+                color: #000;
+            }
+        }
+    }
+}
+
+// 固定图片
+.fixImg {
+    a {
+        width: 60px;
+        height: 68px;
+        position: fixed;
+        bottom: 30px;
+        right: 0px;
+        img {
+            width: 60px;
+            height: 68px;
+        }
+    }
+}
+
+.cu-list {
+    height: 461px; // z-index: -10000;
+    overflow: hidden;
+}

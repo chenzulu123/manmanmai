@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠劵</title>
+    <link rel="stylesheet" href="./css/csx_index.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+    <!--头部-->
+    <header>
+        <a href="./index.html" class="skip"><img src="./images/coupon/back.png" alt=""></a>
+        <p>优惠劵</p><a href="javascript:;" id="download"><img src="./images/coupon/header_app.png" alt=""></a>
+    </header>
+    <!--内容-->
+    <main id="main">
+    </main>
+    <!--首页跳转-->
+    <div class="mid"><a href="./index.html">首页</a> <span>>&nbsp;&nbsp;优惠券</span></div>
+    <!--中间条格-->
+    <div class="gap"></div>
+    <!--底部工具-->
+    <footer>
+        <ul id="fool" class="clearfix">
+            <li><a href="javascript:;">登录</a></li>
+            <li><a href="javascript:;">注册</a></li>
+            <li><img src="./images/coupon/top.jpg" alt=""><a id="backtop" href="javascript:;">返回顶部</a></li>
+        </ul>
+        <div class="tool"><span class="red">手机App下载&nbsp;</span>慢慢买手机版<span class="gray">&nbsp;--&nbsp;掌上比价平台</span></div>
+        <p>m.manmanbuy.com</p>
+    </footer>
+</body>
+
+</html>
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<!--创建模板-->
+<script type="text/html" id="template1">
+
+    <ul class="clearfix">
+        {{each result}}
+        <li id="{{$value.couponId}}">
+            <i class='one'></i>
+            <i class='two'></i>
+            <i class='three'></i>
+            <i class='four'></i>
+            <a href="#" onClick="delayURL('{{$value.couponLink}}?couponId={{$value.couponId}}')"><img src="{{$value.couponImg}}" alt=""><p>{{$value.couponTitle}}</p></a></li>
+        {{/each}}
+    </ul>
+
+</script>
+<!--引进模板-->
+<script src="./js/template-web.js"></script>
+<script src="./js/discounts.js"></script>

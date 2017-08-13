@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* 解决点击高亮*/
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.head {
+  background-color: #ff841d;
+  width: 100%;
+  height: 44px;
+  position: relative;
+}
+.head .back {
+  height: 100%;
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  width: 100%;
+}
+.head .back a {
+  display: block;
+  width: 50px;
+  height: 44px;
+  font-size: 18px;
+  line-height: 44px;
+  color: white;
+  text-decoration: none;
+}
+.head h1 {
+  font-size: 20px;
+  color: white;
+  line-height: 44px;
+  text-align: center;
+  margin: 0px;
+}
+.head .home {
+  height: 100%;
+  width: 50px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  padding: 7px 10px;
+  overflow: hidden;
+}
+.head .home a {
+  display: block;
+  text-decoration: none;
+  width: 50px;
+  height: 44px;
+  background: url("../images/header_app.png") no-repeat;
+  background-size: 32px 32px;
+}
+/*主体部分*/
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  /*底部分页*/
+}
+.container .cu-list ul li {
+  position: relative;
+  padding: 14px 8px;
+  height: 128px;
+  overflow: hidden;
+  transition: all .5s;
+}
+.container .cu-list ul li:hover {
+  transform: scale(0.9);
+  border-radius: 20px;
+  box-shadow: 0  0  12px #666;
+}
+.container .cu-list ul li .one,
+.container .cu-list ul li .two,
+.container .cu-list ul li .three,
+.container .cu-list ul li .four {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: #ccc;
+  opacity: .2;
+  transition: all .5s;
+  z-index: 9999;
+}
+.container .cu-list ul li .one {
+  top: 0;
+  left: 0;
+}
+.container .cu-list ul li .two {
+  top: 0;
+  right: 0;
+}
+.container .cu-list ul li .three {
+  bottom: 0;
+  right: 0;
+}
+.container .cu-list ul li .four {
+  bottom: 0;
+  left: 0;
+}
+.container .cu-list ul li:hover .one {
+  width: 50%;
+  height: 50%;
+}
+.container .cu-list ul li:hover .two {
+  width: 50%;
+  height: 50%;
+}
+.container .cu-list ul li:hover .three {
+  width: 50%;
+  height: 50%;
+}
+.container .cu-list ul li:hover .four {
+  width: 50%;
+  height: 50%;
+}
+.container .cu-list ul li a {
+  display: block;
+  width: 100%;
+  height: 100px;
+  padding-left: 110px;
+}
+.container .cu-list ul li a .pic {
+  position: absolute;
+  left: 0;
+  width: 110px;
+}
+.container .cu-list ul li a .pic img {
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+}
+.container .cu-list ul li a .info {
+  height: 57px;
+  width: 100%;
+  color: #333;
+  font-size: 15px;
+  line-height: 19px;
+  text-align: left;
+}
+.container .cu-list ul li a .info .title span {
+  color: #ff6c00;
+}
+.container .cu-list ul li a .info .other {
+  margin-top: 10px;
+  color: #a1a1a1;
+  font-size: 12px;
+}
+.container .cu-list ul li a .info .other .comment {
+  font-size: 12px;
+  line-height: 16px;
+}
+.container .cu-list ul li a .info .other .comment i {
+  margin-right: 3px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.container .page {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #f2f2f2;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.container .page input {
+  width: 83px;
+  height: 33px;
+  border: 1px solid #cbcbcb;
+  background-color: #ddd;
+  border-radius: 5px;
+  outline: none;
+  cursor: not-allowed;
+}
+.container .page select {
+  margin: 0 auto;
+  height: 33px;
+  width: 130px;
+  padding-left: 40px;
+  font-size: 16px;
+}
+.container .page .prev {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+}
+.container .page .next {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+.foot_menu {
+  height: 36px;
+  padding-left: 8px;
+  background-color: #f4f4f4;
+  line-height: 36px;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+}
+.foot_menu a {
+  display: inline;
+}
+/*底部 部分*/
+.footerApp {
+  padding-top: 25px;
+  background-color: #f2f2f2;
+}
+.footerApp .foot_top {
+  background: #efefef;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+}
+.footerApp .foot_top a {
+  width: 30%;
+  float: left;
+  text-align: center;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+}
+.footerApp .foot_top a img {
+  width: 15px;
+  height: 15px;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 2px;
+}
+.footerApp .foot_top a:last-child {
+  width: 40%;
+  border-right: none;
+}
+.footerApp .footer {
+  font-size: 12px;
+  color: #666;
+  padding: 15px 0;
+}
+.footerApp .footer p {
+  text-align: center;
+}
+.footerApp .footer p a {
+  display: inline;
+}
+.footerApp .footer p a:first-child {
+  color: red;
+}
+.footerApp .footer p a:last-child {
+  color: #000;
+}
+.fixImg a {
+  width: 60px;
+  height: 68px;
+  position: fixed;
+  bottom: 30px;
+  right: 0px;
+}
+.fixImg a img {
+  width: 60px;
+  height: 68px;
+}
+.cu-list {
+  height: 461px;
+  overflow: hidden;
+}

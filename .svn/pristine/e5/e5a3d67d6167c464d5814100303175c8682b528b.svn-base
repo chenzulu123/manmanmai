@@ -1,0 +1,148 @@
+@import "base.less";
+ //头部通栏star
+header{
+ width: 100%;
+ height: 45px;
+ border-radius: 3px;
+ background-color: RGB(244,72,62);
+ position:fixed;
+ 
+    .skip{
+        height:45px;
+        width: 30px;
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left:7px;  
+    }
+
+   p{
+        font-size: 21px;
+        color:white;
+        text-align: center;
+        line-height: 45px;
+    }
+   a{
+       display: block;
+       position: absolute;
+       top: 0;
+       right: 13px;
+       img{
+           margin-top: 3px;
+           width: 35px;
+           height: 35px;
+         
+          
+        
+       }
+   }
+  
+}
+//内容部分
+main{
+    padding-top: 45px;
+    width: 100%;
+     border: 1px solid RGB(238,238,238);
+
+    
+    ul{
+       margin-top: 5px;
+       height: 100%;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content:space-between;
+       li{       
+          width: 32%;
+          border-radius: 10px;
+          box-shadow: 0 2px 3px gray;  
+           a{ 
+         img{
+                display: block;
+                 width: 32%;
+                 margin: 0 auto;
+               }
+           p{
+               font-size: 14px;
+               text-align: center;
+               color:black;
+           }
+           } 
+       }
+       li:last-child{
+           margin-top: 5px;
+        margin-left:1.333%;
+       }
+       
+    }
+}
+//跳转首页
+.mid{
+ width: 100%;
+  background-color: RGB(242,242,242);
+  box-shadow: 1px 1px 2px RGB(204,204,204);   
+  font-size: 16px;
+  line-height: 35px;
+  padding-left: 10px;
+  a{
+      color:RGB(0,0,0);
+  }
+}
+//中间格条
+.gap{
+    height: 25px;
+    border-radius: 5px;
+    border-top: 1px solid RGB(196,196,196);
+    border-bottom: 1px solid RGB(196,196,196);
+     background: linear-gradient(180deg, red 25%, white 25%, white 50%, blue 50%, blue 75%, red 75%) bottom/50px 100px;
+
+}
+
+//底部工具
+footer{
+    width: 100%;
+    background-color: RGB(239,239,239);
+    padding-bottom: 15px;
+    ul{
+        width: 100%;
+        li{
+            float: left;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 5px;
+            // box-sizing: border-box;
+            width: 30%;
+            border-top: 1px solid RGB(196,196,196);
+            border-right: 1px solid RGB(196,196,196);
+            border-bottom: 1px solid RGB(196,196,196);
+            a{
+                color: RGB(0,0,0);
+            }
+        }
+        li:last-child{
+            width: 40%;
+            border-right: none;
+            img{
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+    .tool{
+        text-align: center;
+        .red{
+            color: RGB(255,0,0);
+        }
+        .gray{
+            color:RGB(102,102,102);
+        }
+    }
+    p{
+        text-align: center;
+        color: RGB(102,102,102);
+    }
+
+}
+
+
+      

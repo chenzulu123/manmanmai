@@ -1,0 +1,288 @@
+@import 'gnzk_base.less';
+
+/*头部开始*/
+
+.head {
+    width: 100%;
+    height: 44px;
+    color: #fff;
+    background: #ff841d;
+    position: relative;
+    .back {
+        position: absolute;
+        left: 10px;
+        width: 50px;
+        height: 44px;
+        line-height: 44px;
+    }
+    h1 {
+        height: 44px;
+        font-size: 20px;
+        font-weight: normal;
+        text-align: center;
+        margin: 0;
+        line-height: 44px;
+    }
+    .home {
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+        width: 50px;
+        height: 44px;
+        background: url('../images/header_app.png') no-repeat center/32px;
+        a {
+            height: 44px;
+        }
+    }
+}
+
+
+/*头部结束*/
+
+
+/*内容开始*/
+
+.container {
+    .cu_ontent {
+        padding: 4px 10px;
+        h3 {
+            font-size: 18px;
+            margin: 10px auto 5px auto;
+            text-align: left;
+            color: #5a5a5a;
+        }
+        h4 {
+            font-size: 15px;
+            color: #ff6c00;
+            font-weight: bold;
+        }
+        .info {
+            margin: 12px auto;
+            color: #999999;
+            font-size: 12px;
+            line-height: 24px;
+            .mall {
+                margin: 0 4px;
+            }
+            .addtime {
+                margin-right: 4px;
+            }
+        }
+        .content {
+            .picwrap {
+                float: right;
+                margin: 12px auto auto 10px;
+                img {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+            .conn {
+                font-size: 16px;
+                line-height: 24px;
+                color: #606060;
+                padding-bottom: 20px;
+                p {
+                    margin: 6px auto;
+                }
+                a {
+                    color: #4682c5;
+                    display: inline;
+                }
+            }
+        }
+        .golink {
+            a {
+                height: 40px;
+                line-height: 40px;
+                margin: 20px 10px;
+                background: #FF9000;
+                text-align: center;
+                color: #fff;
+                font-size: 14px;
+                border-radius: 4px;
+            }
+        }
+    }
+    .comment {
+        border-top: 1px solid #e0e0e0;
+        .tit {
+            padding: 6px 8px;
+            font-size: 16px;
+        }
+        .reply {
+            padding: 6px 8px;
+            .form {
+                position: relative;
+                border: 2px solid #ECEAE8;
+                border-radius: 2px;
+                padding: 4px 0 0 4px;
+                textarea {
+                    width: 100%;
+                    height: 68px;
+                    resize: none;
+                    outline: none;
+                    border: none;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    line-height: 22px;
+                    color: #666;
+                }
+                .ctrl {
+                    height: 36px;
+                    background: #fbfbfb;
+                    border-top: 1px solid #f2f2f2;
+                    margin-left: -4px;
+                    input {
+                        width: 100px;
+                        height: 39px;
+                        position: absolute;
+                        right: -1px;
+                        bottom: -2px;
+                        color: #fff;
+                        outline: none;
+                        font-size: 16px;
+                        background: #ff841d;
+                    }
+                }
+            }
+        }
+        .list {
+            .ui-border-b {
+                padding: 18px 10px;
+                .userimg {
+                    float: left;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 20px;
+                    }
+                }
+                .con {
+                    padding-left: 10px;
+                    overflow: hidden;
+                    .name {
+                        margin-bottom: 6px;
+                        font-size: 14px;
+                        .username {
+                            font-size: 13px;
+                            float: left;
+                            color: #5997c0;
+                        }
+                        .time {
+                            font-size: 13px;
+                            float: right;
+                            color: #999999;
+                        }
+                    }
+                    .content {
+                        font-size: 15px;
+                        line-height: 20px;
+                        color: #606060;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*内容结束*/
+
+
+/*导航栏开始*/
+
+.nav {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 8px;
+    font-size: 14px;
+    margin-top: 20px;
+    background: #ebebeb;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ccc;
+    a {
+        display: inline-block;
+    }
+}
+
+
+/*导航栏结束*/
+
+
+/*底部开始*/
+
+.footerApp {
+    margin-top: 25px;
+    .foot_top {
+        height: 34px;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        line-height: 34px;
+        background: #efefef;
+        a {
+            width: 30%;
+            float: left;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 14px;
+            border-right: 1px solid #c4c4c4;
+        }
+        a:last-child {
+            width: 40%;
+            border: 0;
+            text-align: center;
+            img {
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: -5px;
+                margin-right: -2px;
+            }
+        }
+    }
+    .footer {
+        background: #efefef;
+        text-align: center;
+        font-size: 12px;
+        padding: 15px 0;
+        color: #666;
+        a {
+            display: inline-block;
+        }
+        a:nth-child(1) {
+            color: red;
+        }
+        a:nth-child(2) {
+            color: #000;
+        }
+    }
+}
+
+
+/*底部结束*/
+
+
+/*App下载开始*/
+
+.fixed-slow {
+    width: 60px;
+    height: 67px;
+    position: fixed;
+    right: 0px;
+    ;
+    bottom: 30px;
+    z-index: 999;
+    a {
+        width: 60px;
+        height: 67px;
+        background: url('../images/slow.png') no-repeat center/60px 67px;
+        ;
+    }
+}
+
+
+/*App下载结束*/

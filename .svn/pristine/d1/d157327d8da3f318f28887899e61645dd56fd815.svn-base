@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/zepto/zepto.js"></script>
+    <script src="./js/zepto/fx.js"></script>
+    <script src="./js/zepto/fx_methods.js"></script>
+    <script src="./js/zepto/event.js"></script>
+    <script src="./js/zepto/touch.js"></script>
+    <script src="./js/zepto/ajax.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <title>慢慢买首页</title>
+</head>
+<body>
+    <!--设置延迟加载的动画效果  -->
+    <div class="loading">
+        <!--加载进度的动画层-->
+        <div class="pic">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+    </div>
+    <!--首页的盒子  -->
+     <div class="view"> 
+        <a id="dingbu"></a>
+        <!--头部-->
+        <div class="header">
+            <a href="javascript:void(0);">
+                <img src="./images/header_logo.png" alt="logo" class="logo">
+            </a>
+            <a href="javascript:void(0);">
+                <!--下载按钮-->
+                <img src="./images/header_app.png" alt="下载按钮" class="down_button">
+            </a>
+        </div>
+        <!--搜索  -->
+        <div class="search clearfix">
+            <input type="text" class="searchBox" placeholder="请输入你想比价的商品">
+            <input type="button" class="search_btn" value="搜 索"></input>
+            </a>
+        </div>
+        <!--分割线-->
+        <div class="line"></div>
+        <!--首页菜单栏  -->
+        <div class="menu_bar clearfix">
+            <ul class="bar">
+            </ul>
+        </div>
+        <!--分割线  -->
+        <div class="line"></div>
+        <!--超值折扣推荐  -->
+        <div class="discount_recommend clearfix">
+            <a href="./gnzk.html">
+                <span>超值折扣推荐</span>
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt="折扣推荐">
+            </a>
+        </div>
+        <!--折扣推荐内容  -->
+        <div class="discount_content">
+            <!--这里需要清除li标签浮动带来的影响  -->
+            <ul class="discountList clearfix">
+            </ul>
+            <!--更多优惠信息 -->
+            <div class="more_info">
+                <div class="more_discount">
+                    <a href="./haitao.html">更多优惠信息>></a>
+                </div>
+            </div>
+        </div>
+        <!--品牌排行  -->
+        <div class="brand_among">
+            <a href="./Brand.html">
+                <span>品牌排行</span>
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt="折扣推荐">
+            </a>
+        </div>
+        <!--底部工具栏  -->
+        <div class="footer clearfix">
+            <!--按钮栏-->
+            <ul class="clearfix">
+                <li><a href="javascript:void(0);">登录</a></li>
+                <li><a href="javascript:void(0);">注册</a></li>
+                <li class="go_top"><a href="#dingbu"><span class="iconfont icon-packup"></span>返回顶部</a></li>
+            </ul>
+            <!--底部信息-->
+            <p><a href="javascript:void(0);">手机版APP下载</a>&nbsp;慢慢买手机版--掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+</body>
+<!--template模板动态生成按钮列表模板-->
+<script type="text/html" id="template">
+    {{each result}}
+    <li>
+        <a href="{{$value.titlehref}}">
+            <img src="{{$value.src}}" alt="">
+            <span>{{$value.name}}</span>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<!--template模板动态生成折扣推荐列表-->
+<script type="text/html" id="template1">
+    {{each result}}
+    <li>
+        <a href="template.html?id={{$value.productId}}">
+            <!--解析template模板引擎解析html的时候需要在变量前面添加@符号-->
+            {{@$value.productImgSm}}
+            <div class="info">
+                <div class="title">
+                    <!--标题  -->
+                    {{$value.productName}}
+                    <span>{{$value.productPinkage}}</span>
+                </div>
+                <!--这里需要清除子元素浮动带来的影响-->
+                <div class="other">
+                    <!--来自于哪个商城  -->
+                    <span class="mall">{{$value.productFrom}} | {{$value.productTime}}</span>
+                    <!--这里需要使用字体图标解决问题  -->
+                    <!--显示评论信息的条数-->
+                    <div class="icon_number">
+                        <!--字体图标的使用  -->
+                        <span class="iconfont icon-xiaoxi"></span>&nbsp;&nbsp;{{$value.productComCount}}
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script>
+    // 实例化index页面JavaScript文件对象
+    var indexFunction = new IndexFunction();
+</script>
+</html>

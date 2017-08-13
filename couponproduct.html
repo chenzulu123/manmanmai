@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="./css/couponproduct.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
+</head>
+
+<body>
+  <!--遮罩层  -->
+  <div id="mask" class="mask">
+  </div>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/1)"></div>
+      <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/2)"></div>
+      <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/3)"></div>
+      <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/4)"></div>
+      <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/5)"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  <header>
+    <a href="discounts.html" class="skip"><img src="./images/coupon/back.png" alt=""></a>
+    <p>优惠劵</p><a href="javascript:;"><img src="./images/coupon/header_app.png" alt=""></a>
+  </header>
+  <!--加载进度条遮罩层  -->
+  <div class="loading">
+    <!--加载进度的动画层-->
+    <div class="pic">
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
+  </div>
+
+  
+  <div id="change"></div>
+  <div class="prompt">--点餐前出示手机中的优惠券,即可享受优惠--</div>
+  <div class="all" id="all"></div>
+  <img id="backtop" src="./images/coupon/Top.jpg" alt="">
+</body>
+
+</html>
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script type="text/html" id="templateD">
+
+  {{each result}}
+  <div class="model-out">
+    <a id="downbtn" href="javascript:;"><img src="./images/coupon/RING.png" alt=""></a>
+    <div class="up clearfix">
+      <div class="left" id="left"> {{@$value.couponProductImg}}</div>
+
+      <div class="right">
+        <p>{{$value.couponProductName}}</p>
+        <span>{{$value.couponProductPrice}}</span>
+      </div>
+    </div>
+    <div class="down">
+      <p>{{$value.couponProductTime}}</p>
+    </div>
+  </div>
+  {{/each}}
+</script>
+<script src="./js/template-web.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/couponproduct.js"></script>

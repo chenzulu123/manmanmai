@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <link rel="stylesheet" type="" href="css/Brand.css">
+</head>
+
+<body>
+    <!-- 头部开始 -->
+    <!-- 顶部log -->
+    <div class="top-log">
+        <div class="log">
+            <a href="./index.html">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="app">
+            <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- 顶部搜索 -->
+    <div class="search clearfix">
+        <div class="search-txt">
+            <input type="search" placeholder="请输入你想要的商品">
+        </div>
+        <div class="search-btn">
+            <input type="submit" name="" value="搜索">
+        </div>
+    </div>
+
+
+    <!-- 头部结束 -->
+
+
+
+
+    <!-- 主体开始 -->
+    <!-- 导航开始 -->
+    <nav class="nav">
+        <a href="./index.html">首页&nbsp;</a>
+        <a href="javascript:void(0);">>&nbsp;</a>
+        <a href="javscript:;">全部分类</a>
+    </nav>
+    <!-- 导航结束 -->
+
+    <!-- 主体开始 -->
+
+    <div class="main-body">
+        <!-- 热门品牌排行 -->
+        <div class="Title">
+            热门品牌排行
+        </div>
+
+        <div class="list">
+            <!-- 模板内容 -->
+        </div>
+
+
+    </div>
+
+    <!-- 主体结束 -->
+
+    <!-- 主体结束 -->
+
+
+    <!-- 底部导航开始 -->
+    <div class="bottom">
+        <!-- 登录&&注册&&返回顶部 -->
+        <div class="Login">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a id='T_top' href="javascript:;">
+                 <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 
+                返回顶部
+            </a>
+        </div>
+        <!-- 友情链接 -->
+    </div>
+    <!-- 底部导航结束 -->
+
+    <!-- 底部友情链接开始 -->
+
+    <div class="footer">
+        <p>
+            <a href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+            <a href="http://m.manmanbuy.com">慢慢买神经病</a>
+            <a href="javscript:;">-掌上比价平台</a>
+        </p>
+        <p>m.manmanbuy.com</p>
+
+
+    </div>
+
+
+    <!-- 底部友情链接结束 -->
+</body>
+
+</html>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/template-web.js"></script>
+<script src='js/zepto/zepto.js'></script>
+<script src='js/zepto/touch.js'></script>
+<script src='js/zepto/event.js'></script>
+<script type='text/html' id='template'>
+    {{each result}}
+    <div class="fl-t" data-id='{{$value.brandTitleId}}'>
+        <a href="./search/search.html">
+            <div data-ip='{{$value.brandTitle}}'>{{$value.brandTitle}}</div>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<script>
+    $(function () {
+        $.ajax({
+            url: 'http://139.199.192.48:9090/api/getbrandtitle',
+            data: '',
+            success: function (data) {
+                // console.log(data)
+                $('.list').append(template('template', data))
+            }
+        });
+        $('#T_top').click(function(){
+            $(window).scrollTop(0);
+        })
+        $('.list').on('click', '.fl-t', function () {
+            var IOD = this.dataset['id'];
+            window.localStorage.setItem('ID', IOD);
+        })
+        $('.list').on('click','.fl-t div',function(){
+            var ipo = this.dataset['ip'];
+            window.localStorage.setItem('ip',ipo)
+        })
+
+    })
+</script>

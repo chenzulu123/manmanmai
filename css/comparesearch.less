@@ -1,0 +1,206 @@
+/* 导入样式文件 */
+
+@import "base.less";
+
+/* 头部 */
+
+
+/* 面包屑 */
+
+.cs_bread {
+    height: 36px;
+    background-color: #ebebeb;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    line-height: 36px;
+    color: #5a5a5a;
+    font-size: 14px;
+    >span {
+        float: left;
+        margin-right: 5px;
+    }
+    >span:nth-child(2n) {
+        color: #000;
+    }
+    em{
+        float: right;
+        width: 60px;
+        height: 34px;
+        border-radius: 5px;
+        box-shadow: 0 1px 1px #5a5a5a;
+        color: #5a5a5a;
+        text-align: center;
+    }
+}
+
+
+/* 商品详情 */
+
+.cs_goods_detail {
+    padding: 20px 10px 10px 10px;
+    position: relative;
+    text-align: center;
+    .cs_goods_title {
+        padding: 0 20px;
+    }
+    .cs_goods_pic img {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+    }
+    .collection {
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: yellowgreen;
+        color: #fff;
+        text-align: center;
+        line-height: 45px;
+    }
+}
+
+
+/* 商品详情tab栏 */
+
+.cs_goods_tab {
+    width: 100%;
+    height: 34px;
+    border-top: solid 1px #c14d00;
+    border-bottom: solid 1px #c14d00;
+    background-color: #ffbb00;
+    box-sizing: border-box;
+    ul {
+        li {
+            width: 33.33%;
+            height: 32px;
+            float: left;
+            border-right: solid 1px #c14d00;
+            text-align: center;
+            line-height: 32px;
+            color: #fff;
+            font-size: 15px;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        li.csshop{
+            background-color: #ff9900;
+        }
+        li:last-child {
+            border-right: none;
+        }
+    }
+}
+
+.cs_goods_shopping {
+    margin-top: 10px;
+    .plist {
+            height: 50px;
+            padding: 10px;
+            table{
+                tbody{
+                    tr{
+                        td{
+                            a{
+                                img{
+                                    width: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .red{
+                float: right;
+                line-height: 50px;
+                color: red;
+            }
+        }
+}
+
+.cs_goods_pnote {
+    padding: 8px 10px;
+    font-size: 12px;
+    color: #888;
+}
+
+
+/* 网友评价 */
+
+.cs_goods_comments {
+    .title {
+        height: 35px;
+        border-top: 4px solid #7a7a7a;
+        text-align: center;
+        line-height: 31px;
+        padding-top: 1px;
+        >div {
+            background-color: #ccc;
+        }
+    }
+    .evaluateContents {
+        ul {
+            li {
+                position: relative;
+                border-bottom: 1px solid #ccc;
+                padding-top: 10px;
+                .comName,
+                .comTime,
+                .stars,
+                .comFrom,
+                .comContent,
+                .comResponse {
+                    float: left;
+                    padding: 0 10px;
+                    color: #999999;
+                    font-size: 12px;
+                }
+                .comName{
+                    font-size: 14px;
+                }
+                .comTime,
+                .comFrom {
+                    float: right;
+                }
+                .comContent{
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: #000;
+                }
+                .comResponse {
+                    line-height: 30px;
+                }
+                .stars{
+                    float: left;
+                    padding: 0 10px;
+                    position: absolute;
+                    top: 15px;
+                }
+                .stars>li{
+                    float: left;
+                    list-style: none;
+                    font-size: 20px;
+                    color: #ff9900;
+                    margin-right: 2px;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .lookMore {
+        padding: 10px;
+        a {
+            display: block;
+            height: 33px;
+            background-color: #d4d4d4;
+            text-align: center;
+            line-height: 33px;
+            font-size: 14px;
+            color: #5a5a5a;
+            border-radius: 5px;
+            box-shadow: 0 2px 1px #666;
+        }
+    }
+}

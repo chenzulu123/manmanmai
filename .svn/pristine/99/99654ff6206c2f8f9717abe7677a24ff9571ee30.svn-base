@@ -1,0 +1,199 @@
+/* 导入样式文件 */
+html,
+body {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+img {
+  width: 100px;
+  display: block;
+}
+input {
+  outline: none;
+  border: none;
+}
+/* 头部 */
+/* 面包屑 */
+.cs_bread {
+  height: 36px;
+  background-color: #ebebeb;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  line-height: 36px;
+  color: #5a5a5a;
+  font-size: 14px;
+}
+.cs_bread > span {
+  float: left;
+  margin-right: 5px;
+}
+.cs_bread > span:nth-child(2n) {
+  color: #000;
+}
+.cs_bread em {
+  float: right;
+  width: 60px;
+  height: 34px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px #5a5a5a;
+  color: #5a5a5a;
+  text-align: center;
+}
+/* 商品详情 */
+.cs_goods_detail {
+  padding: 20px 10px 10px 10px;
+  position: relative;
+  text-align: center;
+}
+.cs_goods_detail .cs_goods_title {
+  padding: 0 20px;
+}
+.cs_goods_detail .cs_goods_pic img {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+}
+.cs_goods_detail .collection {
+  position: absolute;
+  top: 60px;
+  right: 40px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: yellowgreen;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+}
+/* 商品详情tab栏 */
+.cs_goods_tab {
+  width: 100%;
+  height: 34px;
+  border-top: solid 1px #c14d00;
+  border-bottom: solid 1px #c14d00;
+  background-color: #ffbb00;
+  box-sizing: border-box;
+}
+.cs_goods_tab ul li {
+  width: 33.33%;
+  height: 32px;
+  float: left;
+  border-right: solid 1px #c14d00;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+  font-size: 15px;
+  list-style: none;
+  box-sizing: border-box;
+}
+.cs_goods_tab ul li.csshop {
+  background-color: #ff9900;
+}
+.cs_goods_tab ul li:last-child {
+  border-right: none;
+}
+.cs_goods_shopping {
+  margin-top: 10px;
+}
+.cs_goods_shopping .plist {
+  height: 50px;
+  padding: 10px;
+}
+.cs_goods_shopping .plist table tbody tr td a img {
+  width: 50px;
+}
+.cs_goods_shopping .plist .red {
+  float: right;
+  line-height: 50px;
+  color: red;
+}
+.cs_goods_pnote {
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #888;
+}
+/* 网友评价 */
+.cs_goods_comments .title {
+  height: 35px;
+  border-top: 4px solid #7a7a7a;
+  text-align: center;
+  line-height: 31px;
+  padding-top: 1px;
+}
+.cs_goods_comments .title > div {
+  background-color: #ccc;
+}
+.cs_goods_comments .evaluateContents ul li {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  padding-top: 10px;
+}
+.cs_goods_comments .evaluateContents ul li .comName,
+.cs_goods_comments .evaluateContents ul li .comTime,
+.cs_goods_comments .evaluateContents ul li .stars,
+.cs_goods_comments .evaluateContents ul li .comFrom,
+.cs_goods_comments .evaluateContents ul li .comContent,
+.cs_goods_comments .evaluateContents ul li .comResponse {
+  float: left;
+  padding: 0 10px;
+  color: #999999;
+  font-size: 12px;
+}
+.cs_goods_comments .evaluateContents ul li .comName {
+  font-size: 14px;
+}
+.cs_goods_comments .evaluateContents ul li .comTime,
+.cs_goods_comments .evaluateContents ul li .comFrom {
+  float: right;
+}
+.cs_goods_comments .evaluateContents ul li .comContent {
+  font-size: 14px;
+  line-height: 22px;
+  color: #000;
+}
+.cs_goods_comments .evaluateContents ul li .comResponse {
+  line-height: 30px;
+}
+.cs_goods_comments .evaluateContents ul li .stars {
+  float: left;
+  padding: 0 10px;
+  position: absolute;
+  top: 15px;
+}
+.cs_goods_comments .evaluateContents ul li .stars > li {
+  float: left;
+  list-style: none;
+  font-size: 20px;
+  color: #ff9900;
+  margin-right: 2px;
+  border-bottom: none;
+}
+.cs_goods_comments .lookMore {
+  padding: 10px;
+}
+.cs_goods_comments .lookMore a {
+  display: block;
+  height: 33px;
+  background-color: #d4d4d4;
+  text-align: center;
+  line-height: 33px;
+  font-size: 14px;
+  color: #5a5a5a;
+  border-radius: 5px;
+  box-shadow: 0 2px 1px #666;
+}

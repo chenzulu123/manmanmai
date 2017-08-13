@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/gnxq.css">
+</head>
+
+<body>
+    <!--头部开始-->
+    <div class="head">
+        <div class="back">
+            <a href="./gnzk.html"><span class="iconfont">&#xe693;</span></a>
+        </div>
+        <h1>国内折扣</h1>
+        <div class="home">
+            <a href="javascript:void(0)"></a>
+        </div>
+    </div>
+    <!--头部结束-->
+
+    <!--内容开始-->
+    <div class="container">
+        <!-- <div class="cu_ontent">
+            <h3>金丽洁 软毛声波小头电动牙刷</h3>
+            <h4>13.9元包邮（63.9-50）</h4>
+            <div class="info">
+                <span class="mall">天猫商城</span>
+                <span class="addtime">08-03 15:28</span>
+                <span class="author">PXGL2014 / 慢慢买</span>
+            </div>
+            <div class="content">
+                <div class="picwrap">
+                    <img src="" alt="金丽洁 软毛声波小头电动牙刷">
+                </div>
+                <div class="conn">
+                    <p>
+                        促销类型： [用券]
+                        <a href="javascript:void(0)">50.00元满减券</a>
+                    </p>
+                    <p>目前某猫金丽洁旗舰店售价63.9元，可领取一张50元优惠券，券后13.9元包邮，多色可选。</p>
+                    <p>金丽洁软毛声波小头电动牙刷,简约大气造型，防水防摔机身，31000次强劲动力电机，可深入清洁牙齿间隙，除去顽固菌斑等效果。</p>
+                </div>
+            </div>
+            <div class="golink">
+                <a href="javascript:void(0)">前往购买</a>
+            </div>
+        </div>
+        <div class="comment"></div>  -->
+    </div>
+    <!--内容结束-->
+
+    <!--导航栏开始-->
+    <div class="nav">
+        <!-- <a href="javascript:void(0)">首页</a> &nbsp;&gt;&nbsp;
+        <a href="javascript:void(0)">超值推荐</a> &nbsp;&gt;&nbsp; 金丽洁 软毛声波小头电动牙刷 -->
+    </div>
+    <!--导航栏结束-->
+
+    <!--底部开始-->
+    <div class="footerApp">
+        <div class="foot_top">
+            <a href="javascript:void(0)">登录</a>
+            <a href="javascript:void(0)">注册</a>
+            <a href="javascript:void(0)" class="backTop">
+                <img src="./images/top.jpg" alt="">
+                返回顶部
+            </a>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="javascript:void(0)">手机APP下载</a>
+                <a href="javascript:void(0)">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <!--底部结束-->
+
+    <!--App下载开始-->
+    <div class="fixed-slow">
+        <a href="javascript:void(0)"></a>
+    </div>
+    <!--App下载结束-->
+</body>
+
+<!--模板-->
+<script type="text/html" id="template">
+    <div class="cu_ontent">
+        <h3>{{result[0].productName}}</h3>
+        <h4>{{result[0].productPrice}}</h4>
+        <div class="info">
+            <span class="mall">{{result[0].productFrom}}</span>
+            <span class="addtime">{{result[0].productTime}}</span>
+            <span class="author">{{result[0].productTips}}</span>
+        </div>
+        <div class="content">
+            <div class="picwrap">
+                {{@result[0].productImg}}
+            </div>
+            <div class="conn">
+                <p>
+                    促销类型： [用券]
+                    <a href="javascript:void(0)">50.00元满减券</a>
+                </p>
+                <p>{{result[0].productInfo}}</p>
+                <p>亚洲中国广东省深圳市宝安区庭威工业园黑马4楼前端9期第七小组陈俏是你大爷.</p>
+            </div>
+        </div>
+        <div class="golink">
+            <a href="javascript:void(0)">前往购买</a>
+        </div>
+    </div>
+    <div class="comment">{{@result[0].productComment}}</div>
+
+</script>
+<!--模板2-->
+<script type="text/html" id="template1">
+    <a href="javascript:void(0)">首页</a> &nbsp;&gt;&nbsp;
+    <a href="javascript:void(0)">超值推荐</a> &nbsp;&gt;&nbsp; {{result[0].productName.slice(0,10)}}...
+</script>
+
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/template-web.js"></script>
+<script src="./js/zepto/zepto.js"></script>
+<script src="./js/zepto/touch.js"></script>
+<script src="./js/zepto/event.js"></script>
+<script src="./js/gnxq.js"></script>
+
+</html>

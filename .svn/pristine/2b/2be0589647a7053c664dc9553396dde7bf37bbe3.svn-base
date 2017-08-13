@@ -1,0 +1,313 @@
+/* 担心有些ie浏览器 不识别 媒体查询 only   */
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+  html,
+  body {
+    font-size: 100px;
+  }
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: .16rem;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* 盒子模型的 怪异模式  */
+  box-sizing: border-box;
+}
+body {
+  color: #000;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  /* 移动端 a标签 点击高亮 */
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+  /* 解决图片默认的3像素  */
+  display: block;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+#coverModal {
+  background: url('img/loading.gif') no-repeat center;
+}
+/* 清楚浮动 */
+.clearfix::after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.disabled {
+  cursor: not-allowed;
+  background-color: red;
+}
+.MMB_header {
+  background-color: #ff841d;
+  height: .44rem;
+  text-align: center;
+  line-height: .44rem;
+  color: #fff;
+  font-weight: 700;
+  position: fixed;
+  top: 0;
+  font-size: .2rem;
+  width: 100%;
+}
+.MMB_header a {
+  float: left;
+  margin-left: .08rem;
+}
+.MMB_header a:hover {
+  color: #fff;
+}
+.MMB_header img {
+  position: absolute;
+  right: .17rem;
+  top: .05rem;
+  width: .33rem;
+  height: .33rem;
+  display: inline-block;
+}
+.list {
+  margin-top: .44rem;
+}
+.list .listMenu li {
+  list-style: none;
+  padding: .14rem .08rem;
+  height: 1.28rem;
+}
+.list .listMenu li a {
+  text-decoration: none;
+  color: inherit;
+}
+.list .listMenu li a .pic {
+  float: left;
+  width: 1.1rem;
+  padding-right: .1rem;
+}
+.list .listMenu li a .pic img {
+  height: 1rem;
+  vertical-align: middle;
+}
+.list .listMenu li a .info {
+  font-size: .14rem;
+  line-height: .24rem;
+}
+.list .listMenu li a .info .title {
+  color: #333333;
+  word-break: break-all;
+  line-height: .25rem;
+  min-height: .57rem;
+  text-align: left;
+  font-weight: normal;
+}
+.list .listMenu li a .info .title span {
+  color: #ff6c00;
+  display: inline;
+}
+.list .listMenu li a .info .other {
+  margin-top: .08rem;
+  color: #a1a1a1;
+  font-size: .12rem;
+}
+.list .listMenu li a .info .other .mall {
+  float: left;
+}
+.list .listMenu li a .info .other .comment {
+  float: right;
+  margin: 0 auto;
+}
+.MMB_bottom {
+  font-size: .15rem;
+  background-color: #f2f2f2;
+}
+.MMB_bottom .box {
+  padding: .2rem 0;
+  position: relative;
+  height: .74rem;
+  border-bottom: 1px solid #ccc;
+}
+.MMB_bottom .box input {
+  background: #e3e3e3;
+  width: .82rem;
+  height: 0.33rem;
+  border: 1px solid #CCCCCC;
+  outline: none;
+  border-radius: .08rem;
+}
+.MMB_bottom .box #btnUp {
+  float: left;
+  margin-left: .2rem;
+}
+.MMB_bottom .box #btnDown {
+  float: right;
+  margin-right: .2rem;
+}
+.MMB_bottom .box #se {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 0.34rem;
+}
+.MMB_bottom .nav {
+  border-bottom: 1px solid #ccc;
+  padding-left: .05rem;
+  line-height: .36rem;
+  background-color: #f7f7f7;
+}
+.MMB_bottom .nav a {
+  display: inline-block;
+  height: .36rem;
+}
+footer ul {
+  width: 100%;
+  font-size: .14rem;
+  background: #efefef;
+  height: .34rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid #ccc;
+}
+footer ul li {
+  text-align: center;
+  float: left;
+  width: 30%;
+  line-height: .34rem;
+  border-right: 1px solid #ccc;
+}
+footer ul li:last-child {
+  width: 40%;
+  border-right: none;
+}
+footer ul li:last-child a {
+  color: #747474;
+  font-weight: 900;
+}
+footer ul li:last-child a span {
+  font-size: .14rem;
+  color: #000;
+  font-weight: normal;
+}
+footer .down {
+  background: #efefef;
+  text-align: center;
+  font-size: .12rem;
+  padding: .15rem 0;
+  color: #666;
+  height: .6rem;
+}
+footer .down p {
+  margin: 0;
+  color: #000;
+}
+footer .down p span:first-child {
+  color: #ff0000;
+}
+footer .down p span:last-child {
+  color: #666;
+}
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: gray;
+}
+.loading .pic {
+  /*要定位的元素自动居中，可以先设置四个方位的距离都为0，然后直接来一个margin：auto  */
+  width: .5rem;
+  height: .5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.loading .pic i {
+  float: left;
+  display: block;
+  width: .06rem;
+  height: .5rem;
+  margin: 0 2px;
+  background: #399;
+  -webkit-transform: scaleY(0.4);
+  -ms-transform: scaleY(0.4);
+  transform: scaleY(0.4);
+  /*设置i的高度进行变化，变化时间是1.2s间隔，循环播放*/
+  -webkit-animation: load 1.2s infinite;
+  animation: load 1.2s infinite;
+}
+@-webkit-keyframes load {
+  0%,
+  40%,
+  100% {
+    /*0%,40%,100%进行0.4的缩放  */
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+  }
+  /*20%进行100%的缩放  */
+  20% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@keyframes load {
+  0%,
+  40%,
+  100% {
+    /*0%,40%,100%进行0.4的缩放  */
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+  }
+  /*20%进行100%的缩放  */
+  20% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+/*给单个的i标签设置延迟时间*/
+.loading .pic i:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.loading .pic i:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.loading .pic i:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.loading .pic i:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}

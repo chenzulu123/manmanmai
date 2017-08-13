@@ -1,0 +1,114 @@
+
+// // $(window).scroll
+// 把需求2 需求3的代码抽取出来
+// 第几页
+var myPageNum = 1;
+// 总页数
+var totalPage;
+//  分页数
+var num = 0;
+// 点击下一页
+document.querySelector('#btnDown').addEventListener("touchend", function () {
+
+  if ($(this).hasClass('disabled')) {
+    alert('别点了,疼~~~~~~~');
+    return;
+  }
+  myPageNum++;
+  num++;
+
+  // 刷新页面
+  getData()
+});
+// 点击上一页
+document.querySelector('#btnUp').addEventListener("touchend", function () {
+
+  if ($(this).hasClass('disabled')) {
+    alert('别点了,疼~~~~~~~');
+    return;
+  }
+  myPageNum--;
+  num--
+  // 刷新页面
+  getData()
+});
+
+$('#se').change(function () {
+  myPageNum = $(this).val();
+  num=myPageNum-1
+  console.log(myPageNum)
+  getData();
+
+})
+var nnn = $('#se').val()
+console.log(nnn)
+// 获取数据
+getData()
+// $('#se>option').eq(0).select(function () {
+//   console.log(1);
+
+// })
+
+function getData() {
+  $.ajax({
+    url: "http://139.199.192.48:9090/api/getmoneyctrl",
+    data: {
+      pageid: myPageNum,
+    },
+    success: function (data) {
+      // 需求2--渲染数据
+      $("#listUl").html(template('template', data));
+      console.log(data);
+      totalPage = Math.ceil(data.totalCount / data.pagesize);
+      var html = "";
+      for (var i = 1; i <= totalPage; i++) {
+        html += ' <option value="' + i + '" >' + i + '/' + totalPage + '</option>';
+      }
+      $('#se').html(html)
+      $('#se>option').eq(num).prop('selected', true)
+
+      if (num == totalPage - 1) {
+        $('#btnDown').addClass('disabled')
+      } else {
+        $('#btnDown').removeClass('disabled')
+      }
+      if (num == 0) {
+        $('#btnUp').addClass('disabled')
+      } else {
+        $('#btnUp').removeClass('disabled')
+      }
+      // var iscroll = new IScroll(".list");
+      
+    }            
+  })
+}
+// 進度條
+$(function () {
+  document.onreadystatechange = function () {
+    //判断请求的信息是否返回完毕
+    if (document.readyState == "complete") {
+      var img = $('img');
+      var num = 0;
+      img.each(function (i) {
+        var oImg = new Image();
+        oImg.onload = function () {
+          oImg.onload = null;
+          num++;
+          $('.loading b').html(parseInt(num / $('img').size() * 100) + "%");
+          // <!--判断页面的图片是否加载完毕  -->
+          if (num >= i) {
+            var timeId = setInterval(function () {
+              $('.loading').fadeOut();
+              clearInterval(timeId);
+            }, 2000);
+
+          }
+        }
+        oImg.src = img[i].src;
+      });
+    }
+  };
+});
+
+
+

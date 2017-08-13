@@ -1,0 +1,302 @@
+@import './base.less';
+
+/*导入基础样式*/
+
+@import './media.less';
+
+/*最外层的大盒子*/
+
+.qcj_cabbagePrice {
+    padding: 82px 0; //挤出位置给头部和tab栏，固定定位
+    background-color: #f7f7f7;
+}
+
+
+/*白菜价头部 begin---------------------*/
+
+.cabbage_head {
+    width: 100%;
+    height: 44px;
+    background-color: #e4393c;
+    padding: 0 50px;
+    /*挤出位置放左右两个图标*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* 左边箭头*/
+    a {
+        height: 100%;
+        width: 50px;
+        position: absolute;
+    }
+    .prev {
+        top: 0;
+        left: 0;
+        padding: 10px 10px;
+        color: white;
+    }
+    h1 {
+        margin: 0;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 44px;
+    }
+    /*右边图片*/
+    .downLoad {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        padding: 5px 10px;
+        span {
+            display: block;
+            width: 34px;
+            height: 34px;
+            background-size: 34px 34px;
+            background-image: url('./../images/header_app.png');
+        }
+    }
+}
+
+
+/*白菜价头部 end---------------------*/
+
+
+/*白菜价tab begin---------------------*/
+
+#wrapper {
+    position: fixed;
+    top: 44px;
+    width: 100%;
+    height: 38px; // touch-action: none;
+    overflow: hidden;
+    z-index: 10;
+    #scroller {
+        width: 185%;
+        height: 38px;
+        position: absolute; // touch-action: none;
+        .cabbage_tab {
+            width: 100%;
+            height: 38px;
+            background-color: #fff;
+            overflow: hidden;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 6px;
+            /* 禁用浏览器默认的触摸行为  */
+            // touch-action: none;
+            ul {
+                width: 200%;
+                height: 38px;
+                li {
+                    float: left;
+                    height: 38px;
+                    line-height: 38px;
+                    a {
+                        margin: 0 12px;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .active {
+                a {
+                    color: red;
+                }
+                border-bottom: 2px solid red;
+            }
+        }
+    }
+}
+
+
+/*白菜价tab end---------------------*/
+
+
+/*白菜价body部分  begin--------------- */
+
+.cabbage_body {
+    border-top: 1px solid #ccc;
+    padding: 8px 0px;
+    .items {
+        width: 100%;
+        ul {
+            li {
+                height: 140px;
+                margin-bottom: 10px;
+                background-color: #fff;
+                padding: 5px 5px;
+            }
+        }
+        .picture {
+            width: 130px;
+            height: 130px;
+            margin-right: 5px;
+            float: left;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .right {
+            .top {
+                margin-bottom: 5px;
+                div {
+                    color: red;
+                }
+                div:nth-child(1) {
+                    display: block;
+                    margin-bottom: 5px;
+                    color: #000;
+                    height: 40px;
+                }
+                div:nth-child(2) {
+                    font-size: 20px;
+                    i,
+                    del {
+                        font-style: normal;
+                        font-size: 14px;
+                        margin-right: 5px;
+                    }
+                    em {
+                        font-style: normal;
+                        font-size: 12px;
+                    }
+                    del {
+                        margin-left: 10px;
+                        color: #999;
+                    }
+                }
+            }
+            .bottom {
+                position: relative;
+                height: 50px;
+                margin-top: 5px;
+                .bar {
+                    //进度条这一行
+                    width: 80px;
+                    position: relative;
+                    i {
+                        position: absolute;
+                        left: 135px;
+                        width: 80px;
+                        height: 15px;
+                        line-height: 15px; // border: 1px solid red; 
+                        // box-sizing: content-box;    
+                        background-color: #ffb7b7;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        em {
+                            height: 100%;
+                            border-radius: 15px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-color: red;
+                            border: 1px solid red;
+                        }
+                        span {
+                            position: absolute; // top:-2px;
+                            left: 27px;
+                            color: white;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 12px;
+                        }
+                    }
+                    b {
+                        color: red;
+                        font-weight: normal;
+                        font-size: 12px;
+                        position: absolute;
+                        right: -220px;
+                    }
+                }
+                .discount {
+                    //点我领取优惠券的样式
+                    position: absolute;
+                    left: 135px;
+                    bottom: 0;
+                    width: 120px;
+                    height: 25px;
+                    line-height: 25px;
+                    text-align: center;
+                    font-size: 12px;
+                    border: 1px dashed red;
+                    color: red;
+                    margin-top: 10px;
+                }
+                .productHref {
+                    //下单链接
+                    width: 70px;
+                    height: 25px;
+                    line-height: 25px;
+                    text-align: center;
+                    border-radius: 5px;
+                    background-color: #ff5e5d;
+                    color: white;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+
+/*白菜价body部分  end--------------- */
+
+
+/*白菜价foot部分  begin--------------- */
+
+.cabbage_foot {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #f7f7f7;
+    ul {
+        height: 40px;
+        margin-bottom: 20px;
+        li {
+            float: left;
+            width: 33.33%;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #ccc;
+            border-left: none;
+        }
+    }
+    p {
+        font-size: 12px;
+        text-align: center;
+        margin: 0;
+        a {
+            display: inline-block;
+            text-decoration: none;
+        }
+        a:nth-child(1) {
+            color: red;
+        }
+        span {
+            color: #737373;
+        }
+    }
+    .website {
+        color: #737373;
+    }
+    #gotop {
+        //返回顶部图标
+        position: absolute;
+        right: 15px;
+        top: -60px;
+        font-size: 40px;
+        opacity: .6;
+    }
+}
+
+
+/*白菜价foot部分  end--------------- */

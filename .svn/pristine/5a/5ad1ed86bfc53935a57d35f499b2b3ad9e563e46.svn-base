@@ -1,0 +1,484 @@
+@import "csh-media.less";
+// 初始化
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: .16rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 盒子模型的 怪异模式  */
+    box-sizing: border-box;
+}
+
+body {
+    color: #000;
+}
+a:hover{
+    color:#000;
+    text-decoration: none;
+    
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    /* 移动端 a标签 点击高亮 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    /* 解决图片默认的3像素  */
+    display: block;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 100%; // outline: none;
+    border: none;
+}
+    
+ #coverModal {
+      background: url('img/loading.gif')no-repeat center;
+    }
+
+
+/* 清楚浮动 */
+
+.clearfix::after {
+    display: block;
+    content: "";
+    height: 0;
+    clear: both;
+}
+
+// 头部
+.mmb() {
+    background-image: url('../images/icon_bar.png');
+    /* 当作二倍图使用 缩写一倍 */
+    background-size: 240px 132px;
+}
+
+.MMB_header {
+    z-index: 2;
+    background-color: #ff841d;
+    height: .44rem;
+    text-align: center;
+    line-height: .44rem;
+    color: #fff;
+    font-weight: 700;
+    position: fixed;
+    width: 100%;
+    font-size: .2rem;
+     a {
+        float: left;
+        margin-left: .08rem;
+
+    }
+    a:hover{
+        color: #fff;
+    }
+    img {
+        position: absolute;
+        right: .17rem;
+        top: .05rem;
+        width: .33rem;
+        height: .33rem;
+        display: inline-block;
+    }
+}
+
+// 内容
+.container {
+    padding: 0;
+    padding-top: .44rem;
+    .cu-content {
+        padding: .06rem .1em;
+        background: #FFFFFF;
+        h3 {
+            font-size: .18rem;
+            margin: .1rem auto .05rem auto;
+            font-weight: 800;
+            text-align: left;
+            text-align-last: left;
+            word-break: break-all;
+            color: #5a5a5a;
+            line-height: normal;
+        }
+        h4 {
+            color: #ff6c00;
+            display: block;
+            font-size: .15rem;
+            font-weight: 700;
+        }
+        .info {
+            margin: .12rem auto;
+            color: #999999;
+            font-size: .12rem;
+            span {
+                color: #999999;
+                vertical-align: middle;
+            }
+            span:last-child {
+                a {
+                    display: inline-block;
+                    color: #4682c5;
+                }
+            }
+            .mall {
+                margin: 0px .04rem;
+            }
+            .author {
+                margin-right: .04rem;
+            }
+        }
+        .content {
+            .picwrap {
+                width: 1.2rem;
+                float: right;
+                margin: .12rem auto auto .1rem;
+                overflow: hidden;
+                img {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+            }
+            .conn {
+                font-size: .16rem;
+                word-break: break-all;
+                line-height: .24rem;
+                color: #606060;
+                padding-bottom: .2rem;
+                p {
+
+                    color: #606060;
+                    word-break: break-all;
+                    margin: .06rem auto;
+                }
+                p:last-child {
+                    a {
+                        display: inline-block;
+                        color: #4682c5;
+                        text-decoration: none;
+                        word-break: break-all;
+                    }
+                }
+            }
+        }
+        .golink {
+            margin-top: .1rem;
+          
+            a {
+                // display: block;
+                margin: .2rem .1rem;
+                background: #FF9000;
+                height: .4rem;
+                border-radius: 4px;
+                line-height: .4rem;
+                text-align: center;
+                font-size: .14rem;
+                color: #ffffff;
+            }
+        }
+    }
+    .cu-content-pl {
+        // background-color: red;
+        .tit {
+            font-size: .16rem;
+            padding: .06rem .08rem;
+        }
+        .reply {
+            height: 1.25rem;
+            width: 100%; // background-color: red;
+            padding: .06rem .08rem;
+            .form {
+                width: 100%;
+                border: 2px solid #ECEAE8;
+                border-radius: 2px;
+                background-color: #fff;
+                position: relative;
+                margin: 0px auto;
+                height: 1.13rem;
+                textarea {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    resize: none;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    border: none;
+                    line-height: .22rem;
+                    font-size: .14rem;
+                    outline: 0;
+                    color: #666;
+                    height: .68rem;
+                }
+                .ctrl {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    height: .37rem;
+                    background-color: #fbfbfb;
+                    border-top: 1px solid #f2f2f2;
+                    input {
+                        float: right;
+                        background: #ff841d;
+                        text-align: center;
+                        height: .37rem;
+                        width: 1rem;
+                        color: #fff;
+                        border-radius: 0 0 2px 0;
+                        font-size: .16rem; // -webkit-appearance: none;
+                    }
+                }
+            }
+        }
+        .tit {
+            font-size: .16rem;
+            padding: .06rem .08rem;
+        }
+        .list {
+            ul {
+                margin-bottom: 0;
+                li {
+                    padding: .18rem .1rem;
+                    background-color: #FFFFFF;
+                    .userimg {
+                        width: .4rem;
+                        float: left;
+                        overflow: hidden;
+                        img {
+                            width: .4rem;
+                            background-position: top;
+                            border-radius: .2rem;
+                            height: .4rem;
+                        }
+                    }
+                    .con {
+                        overflow: hidden;
+                        padding-left: .1rem;
+                        .name {
+                            margin-bottom: .06rem;
+                            .username {
+                                color: #5997c0;
+                                font-size: .13rem !important;
+                                float: left;
+                            }
+                            .time {
+                                color: #999999;
+                                font-size: .13rem !important;
+                                float: right;
+                            }
+                        }
+                        .content {
+                            word-break: break-all;
+                            font-size: .15rem !important;
+                            color: #606060;
+                            line-height: .2rem;
+                            img {
+                                display: inline-block; // vertical-align: middle;
+                                width: .22rem;
+                                height: .22rem;
+                            }
+                            .yinyong {
+                                background-color: #FBFBFB;
+                                border: 1px solid #eeeeee;
+                                padding: 4px 6px;
+                                border-radius: 3px;
+                                margin-top: 2px;
+                                span {
+                                    display: block;
+                                    margin-bottom: 3px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 翻页
+.MMB_bottom {
+    font-size: .15rem;
+    background-color: #f2f2f2;
+    .box {
+        text-align: center;
+        line-height: .42rem;
+    }
+    .nav {
+        border-bottom: 1px solid #ccc;
+        padding-left: .06rem;
+        line-height: .36rem;
+        background-color: #f7f7f7;
+        a {
+            display: inline-block;
+            height: .36rem;
+        }
+    }
+}
+
+// 底部
+footer {
+    ul {
+        // position: fixed;
+        width: 100%;
+        // bottom: 0;
+        font-size: .14rem;
+        background: #efefef;
+        height: .34rem;
+        margin-bottom: 0;
+        border-bottom: 1px solid #ccc;
+        li {
+            text-align: center;
+            float: left;
+            width: 30%;
+            line-height: .34rem;
+            border-right: 1px solid #ccc;
+        }
+        li:last-child {
+            width: 40%;
+            border-right: none;
+            a {
+                color: #747474; //    font-size: .16rem;
+                font-weight: 900;
+                span {
+                    font-size: .14rem;
+                    color: #000;
+                    font-weight: normal;
+                    ;
+                }
+            }
+        }
+    }
+    .down {
+
+        background: #efefef;
+        text-align: center;
+        font-size: .12rem;
+        padding: .15rem 0;
+        color: #666;
+        height: .6rem;
+        p {
+            margin: 0;
+            color: #000;
+            span:first-child {
+                color: #ff0000;
+            }
+            span:last-child {
+                color: #666;
+            }
+        }
+    }
+}
+
+
+// 页面等待效果
+.loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: gray;
+}
+
+.loading .pic {
+    /*要定位的元素自动居中，可以先设置四个方位的距离都为0，然后直接来一个margin：auto  */
+    width: .5rem;
+    height: .5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.loading .pic i {
+    float: left;
+    display: block;
+    width: 6px;
+    height: .5rem;
+    margin: 0 2px;
+    background: #399;
+    -webkit-transform: scaleY(0.4);
+    -ms-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+    /*设置i的高度进行变化，变化时间是1.2s间隔，循环播放*/
+    -webkit-animation: load 1.2s infinite;
+    animation: load 1.2s infinite;
+}
+@-webkit-keyframes load {
+    0%,
+    40%,
+    100% {
+        /*0%,40%,100%进行0.4的缩放  */
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+    /*20%进行100%的缩放  */
+    20% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+@keyframes load {
+    0%,
+    40%,
+    100% {
+        /*0%,40%,100%进行0.4的缩放  */
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+    /*20%进行100%的缩放  */
+    20% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+
+/*给单个的i标签设置延迟时间*/
+
+.loading .pic i:nth-child(2) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.loading .pic i:nth-child(3) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.loading .pic i:nth-child(4) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.loading .pic i:nth-child(5) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}

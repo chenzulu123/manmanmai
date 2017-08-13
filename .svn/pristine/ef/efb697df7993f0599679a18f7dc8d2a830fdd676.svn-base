@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--引用样式文件-->
+    <link rel="stylesheet" href="../css/comparesearch.css">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/comparesearch.js"></script>
+
+    <body>
+        <!--头部-->
+        <header>
+
+        </header>
+        <!--搜索框-->
+        <div class="search"></div>
+        <!--面包屑-->
+        <div class="cs_bread clearfix">
+            <span><a href="./../index.html">首页</a></span>
+            <span>&gt;</span>
+            <span><a class="category" href="./product_list.html"></a></span>
+            <span>&gt;</span>
+            <span><a class="brandName" href="javascript:;"><a/></span>
+            <em>筛选</em>
+        </div>
+        <!--商品详情-->
+        <div class="cs_goods_detail">
+            <div class="cs_goods_title"></div>
+            <div class="cs_goods_pic">
+                <!--<img src="./images/haitao.png" alt="">            -->
+            </div>
+            <div class="collection"><a href="javascript:;">收藏</a></div>
+        </div>
+        <div class="cs_goods_tab">
+            <ul>
+                <li class="csshop"><a href="javascript:;">比价购买</a></li>
+                <li><a href="javascript:;">产品参数</a></li>
+                <li><a href="javascript:;">优选评价</a></li>
+            </ul>
+        </div>
+        <div class="cs_goods_shopping">
+            <div class="plist">
+                <!--<ul>
+                    <li>11</li>
+                </ul>-->
+            </div>
+        </div>
+        <div class="cs_goods_pnote">
+            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+        <!--网友评价-->
+        <div class="cs_goods_comments">
+            <div class="title">
+                <div>网友评价</div>
+            </div>
+            <div class="evaluateContents">
+                <ul>
+                    <li class="clearfix">
+                        <div class="comName"></div>
+                        <div class="comTime"></div>
+                        <br>
+                        <ul class="stars"></ul>
+                        <div class="comFrom"></div>
+                        <br>
+                        <div class="comContent"></div>
+                        <div class="comResponse"><a href="javascript:;">回复</a></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="lookMore">
+                <a href="">查看更多评价</a>
+            </div>
+        </div>
+    </body>
+
+</html>

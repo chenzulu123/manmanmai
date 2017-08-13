@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* 盒子模型的 怪异模式  */
+}
+html {
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  /* 移动端 a标签 点击高亮 */
+  -webkit-tap-highlight-color: transparent;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+  /* 解决图片默认的3像素  */
+  display: block;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/* 清除浮动 */
+.clearfix::after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/font_q0dku14gt5gkfbt9/iconfont.eot');
+  src: url('../font/font_q0dku14gt5gkfbt9/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/font_q0dku14gt5gkfbt9/iconfont.woff') format('woff'), url('../font/font_q0dku14gt5gkfbt9/iconfont.ttf') format('truetype'), url('../font/font_q0dku14gt5gkfbt9/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*头部开始*/
+.head {
+  width: 100%;
+  height: 44px;
+  color: #fff;
+  background: #ff841d;
+  position: relative;
+}
+.head .back {
+  position: absolute;
+  left: 10px;
+  width: 50px;
+  height: 44px;
+  line-height: 44px;
+}
+.head h1 {
+  height: 44px;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  line-height: 44px;
+}
+.head .home {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  width: 50px;
+  height: 44px;
+  background: url('../images/header_app.png') no-repeat center / 32px;
+}
+.head .home a {
+  height: 44px;
+}
+/*头部结束*/
+/*内容开始*/
+.container .cu_ontent {
+  padding: 4px 10px;
+}
+.container .cu_ontent h3 {
+  font-size: 18px;
+  margin: 10px auto 5px auto;
+  text-align: left;
+  color: #5a5a5a;
+}
+.container .cu_ontent h4 {
+  font-size: 15px;
+  color: #ff6c00;
+  font-weight: bold;
+}
+.container .cu_ontent .info {
+  margin: 12px auto;
+  color: #999999;
+  font-size: 12px;
+  line-height: 24px;
+}
+.container .cu_ontent .info .mall {
+  margin: 0 4px;
+}
+.container .cu_ontent .info .addtime {
+  margin-right: 4px;
+}
+.container .cu_ontent .content .picwrap {
+  float: right;
+  margin: 12px auto auto 10px;
+}
+.container .cu_ontent .content .picwrap img {
+  width: 120px;
+  height: 120px;
+}
+.container .cu_ontent .content .conn {
+  font-size: 16px;
+  line-height: 24px;
+  color: #606060;
+  padding-bottom: 20px;
+}
+.container .cu_ontent .content .conn p {
+  margin: 6px auto;
+}
+.container .cu_ontent .content .conn a {
+  color: #4682c5;
+  display: inline;
+}
+.container .cu_ontent .golink a {
+  height: 40px;
+  line-height: 40px;
+  margin: 20px 10px;
+  background: #FF9000;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.container .comment {
+  border-top: 1px solid #e0e0e0;
+}
+.container .comment .tit {
+  padding: 6px 8px;
+  font-size: 16px;
+}
+.container .comment .reply {
+  padding: 6px 8px;
+}
+.container .comment .reply .form {
+  position: relative;
+  border: 2px solid #ECEAE8;
+  border-radius: 2px;
+  padding: 4px 0 0 4px;
+}
+.container .comment .reply .form textarea {
+  width: 100%;
+  height: 68px;
+  resize: none;
+  outline: none;
+  border: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  line-height: 22px;
+  color: #666;
+}
+.container .comment .reply .form .ctrl {
+  height: 36px;
+  background: #fbfbfb;
+  border-top: 1px solid #f2f2f2;
+  margin-left: -4px;
+}
+.container .comment .reply .form .ctrl input {
+  width: 100px;
+  height: 39px;
+  position: absolute;
+  right: -1px;
+  bottom: -2px;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  background: #ff841d;
+}
+.container .comment .list .ui-border-b {
+  padding: 18px 10px;
+}
+.container .comment .list .ui-border-b .userimg {
+  float: left;
+}
+.container .comment .list .ui-border-b .userimg img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+.container .comment .list .ui-border-b .con {
+  padding-left: 10px;
+  overflow: hidden;
+}
+.container .comment .list .ui-border-b .con .name {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+.container .comment .list .ui-border-b .con .name .username {
+  font-size: 13px;
+  float: left;
+  color: #5997c0;
+}
+.container .comment .list .ui-border-b .con .name .time {
+  font-size: 13px;
+  float: right;
+  color: #999999;
+}
+.container .comment .list .ui-border-b .con .content {
+  font-size: 15px;
+  line-height: 20px;
+  color: #606060;
+}
+/*内容结束*/
+/*导航栏开始*/
+.nav {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  padding-left: 8px;
+  font-size: 14px;
+  margin-top: 20px;
+  background: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+}
+.nav a {
+  display: inline-block;
+}
+/*导航栏结束*/
+/*底部开始*/
+.footerApp {
+  margin-top: 25px;
+}
+.footerApp .foot_top {
+  height: 34px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  line-height: 34px;
+  background: #efefef;
+}
+.footerApp .foot_top a {
+  width: 30%;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+}
+.footerApp .foot_top a:last-child {
+  width: 40%;
+  border: 0;
+  text-align: center;
+}
+.footerApp .foot_top a:last-child img {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: -2px;
+}
+.footerApp .footer {
+  background: #efefef;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 0;
+  color: #666;
+}
+.footerApp .footer a {
+  display: inline-block;
+}
+.footerApp .footer a:nth-child(1) {
+  color: red;
+}
+.footerApp .footer a:nth-child(2) {
+  color: #000;
+}
+/*底部结束*/
+/*App下载开始*/
+.fixed-slow {
+  width: 60px;
+  height: 67px;
+  position: fixed;
+  right: 0px;
+  bottom: 30px;
+  z-index: 999;
+}
+.fixed-slow a {
+  width: 60px;
+  height: 67px;
+  background: url('../images/slow.png') no-repeat center / 60px 67px;
+}
+/*App下载结束*/

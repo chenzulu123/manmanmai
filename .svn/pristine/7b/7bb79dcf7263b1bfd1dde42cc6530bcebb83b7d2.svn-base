@@ -1,0 +1,136 @@
+/*
+itcast(dom).tap(function(){
+  自己的逻辑
+});
+*/
+
+
+// itcast(domDiv).tap(function(){
+//   console.log('自古真情留不住,唯有套路得人心');
+// });
+function itcast(dom) {
+  var obj = {
+    tap: function (callback) {
+
+      // 手指按下的坐标
+      var startX, startY;
+      // 手指按下的时间
+      var startTime;
+      // 绑定事件  
+      dom.addEventListener("touchstart", function (e) {
+        // 判断手指的个数
+        if (e.targetTouches.length > 1) {
+          return;
+        }
+
+        // 记录手指按下的坐标 -- 因为只有一根手指 索引是 0
+        startX = e.targetTouches[0].clientX;
+        startY = e.targetTouches[0].clientY;
+
+        // console.log(startX,startY);
+        // 记录手指按下的时间
+        //   Date.now() 返回了 1970 1 1 到现在毫秒数 
+        //  var d=new Date();  d.getTime();
+        startTime = Date.now();
+        // console.log(startTime);
+
+      });
+
+      // 手指松开事件
+      dom.addEventListener("touchend", function (e) {
+        // 判断手指的个数 因为手指已经离开屏幕了 索引 只能用 changedTouches
+        if (e.changedTouches.length > 1) {
+          return;
+        }
+
+        // 获取手指离开的坐标
+        var endX = e.changedTouches[0].clientX;
+        var endY = e.changedTouches[0].clientY;
+
+        // console.log(endX,endY);
+        // 判断手指移动的距离  也就是距离 有正有负的  要加上绝对值
+        // 判断了水平滑动的距离
+        if (Math.abs(endX - startX) > 70) {
+          return;
+        }
+        // 判断垂直滑动的距离
+        if (Math.abs(endY - startY) > 70) {
+          return;
+        }
+
+        // 手指按下的时长不能超过 300ms
+        var endTime = Date.now();
+        // console.log(endTime-startTime);
+        // 判断手指按下的时间
+        if (endTime - startTime > 300) {
+          return;
+        }
+
+        // 触发 我们自己的tap点击逻辑  把事件源对象传递出去 
+        callback(e);
+      });
+    },
+    swipe: function (callback) {
+      // 声明手指按下的坐标
+      var startX, startY;
+
+      // 声明手指按下的时间
+      var startTime;
+
+      // 手指按下 
+      dom.addEventListener("touchstart", function (e) {
+        // 判断手指的个数
+        if (e.targetTouches.length > 1) {
+          return;
+        }
+
+        // 记录手指按下的坐标
+        startX = e.targetTouches[0].clientX;
+        startY = e.targetTouches[0].clientY;
+
+        // 记录手指按下的时间
+        startTime = Date.now();
+      });
+
+      // 手指离开
+      dom.addEventListener("touchend", function (e) {
+        // 判断手指的个数
+        if (e.changedTouches.length > 1) {
+          return;
+        }
+
+        // 记录手指松开的坐标
+        var endX = e.changedTouches[0].clientX;
+        var endY = e.changedTouches[0].clientY;
+
+        // 定义方向
+        var direction;
+        // 判断滑动的距离
+        // 判断水平方向的滑动的距离  5px
+        if (Math.abs(endX - startX) > 5) {
+          //判断滑动的方向  当endX大于startX的话 右滑
+          direction = endX > startX ? "right" : "left";
+        } else if (Math.abs(endY - startY) > 5) {
+          // 判断滑动的方向
+          direction = endY > startY ? "down" : "up";
+        } else {
+          /* 极不满足水平的滑动 也不满足垂直方向的滑动  */
+          return;
+        }
+
+        // 判断手指按下的时间
+        var endTime = Date.now();
+        // 手指按下的时间不能太长 800ms
+        if (endTime - startTime > 800) {
+          return;
+        }
+
+        // 执行自己的逻辑了
+        // console.log(direction);
+        //  
+        callback(direction);
+      });
+    }
+  };
+  return obj;
+}

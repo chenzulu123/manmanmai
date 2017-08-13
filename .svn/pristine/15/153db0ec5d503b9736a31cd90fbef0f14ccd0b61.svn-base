@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/fonts/arrow/iconfont.css">
+    <link rel="stylesheet" href="./lib/fonts/xiaoxi/iconfont.css">
+    <link rel="stylesheet" href="./css/haitao.css">
+</head>
+
+<body>
+    <!--头部-->
+    <div class="head">
+        <div class="back">
+            <a href="javascript:void(0)" class="iconfont icon-arrowleft"></a>
+        </div>
+        <h1>海淘折扣</h1>
+        <div class="home">
+            <a href="javascript:void(0)"></a>
+        </div>
+    </div>
+    <!--主体部分-->
+    <div class="container">
+        <div class="cu-list" id="cu-list">
+            <ul class="items">
+            </ul>
+        </div>
+        <!--底部分页-->
+        <div class="page">
+            <input class="prev" type="button" value="上一页">
+            <input class="next" type="button" value="下一页">
+            <select name="" id="selectPage">
+                        <option value="1">1/15</option>
+                        <option value="2">2/15</option>
+                        <option value="3">3/15</option>
+                        <option value="4">4/15</option>
+                        <option value="5">5/15</option>
+                        <option value="6">6/15</option>
+                        <option value="7">7/15</option>
+                        <option value="8">8/15</option>
+                        <option value="9">9/15</option>
+                        <option value="10">10/15</option>
+                        <option value="11">11/15</option>
+                        <option value="12">12/15</option>
+                        <option value="13">13/15</option>
+                        <option value="14">14/15</option>
+                        <option value="15">15/15</option>
+                    </select>
+        </div>
+    </div>
+    <!--底部导航栏-->
+    <div class="foot_menu">
+        <!--返回首页 链接-->
+        <a href="javascript:void(0)">首页</a> >
+        <!--返回省钱控 链接-->
+        <a href="javascript:void(0)">省钱控</a> >海淘折扣
+    </div>
+    <!--底部部分-->
+    <div class="footerApp">
+        <div class="foot_top">
+            <a href="javascript:void(0)">登录</a>
+            <a href="javascript:void(0)">注册</a>
+            <a class="backTop" href="javascript:void(0)"><img src="./images/top.jpg" alt="">返回顶部</a>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="javascript:void(0)">手机APP下载</a>
+                <a href="javascript:void(0)">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+    <div class="fixImg">
+        <a href="javascript:void(0)">
+            <img src="./images/app.png" alt="">
+       </a>
+    </div>
+</body>
+
+</html>
+<!--定义模板-->
+<script type="text/html" id="template">
+    {{each result}}
+    <li class='item' data-id='{{$value.productId}}'>
+        <a href="./haitao_info.html" class="clearfix">
+            <div class="pic">
+                {{@$value.productImgSm}}
+            </div>
+            <div class="info">
+                <div class="title">
+                    {{$value.productName}}
+                    <span>{{$value.productPinkage}}</span>
+                </div>
+                <div class="other clearfix">
+                    <span class="mall fl">{{$value.productFrom}}</span>
+                    <span class="comment fr">
+                        <i class="iconfont icon-xiaoxi"></i>{{$value.productComCount.charAt(1)}}
+                    </span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each result}}
+</script>
+<!--引入zepto文件包-->
+<script src="./lib/zepto/zepto.js"></script>
+<!--点击事件tap-->
+<script src="./lib/zepto/event.js"></script>
+<script src="./lib/zepto/touch.js"></script>
+<!--ajax请求-->
+<script src="./lib/zepto/ajax.js"></script>
+<!--<script src="./lib/zepto/fx.js"></script>-->
+<script src="./lib/js/template-web.js"></script>
+<!--引入iscroll文件-->
+<script src="./lib/js/iscroll.js"></script>
+<script>
+    //加载默认页面
+    load(1);
+    function load(id) {
+        $.ajax({
+            url: 'http://139.199.192.48:9090/api/getmoneyctrl',
+            type: 'get',
+            data: {
+                pageid: id
+            },
+            success: function (data) {
+                $(".items").html(template("template", data));
+                console.log(data);
+                // iScroll作用于滚动区域的外层。
+                var iscroll = new IScroll(".cu-list");
+                //往上滑动li标签 翻页
+                // $('.items').eq(9).swipeup(func)
+                //-----------------------------------
+
+                //-----------------------------------
+            }
+        });
+    }
+    //翻页功能 
+    var page = 1;
+    $('.next').tap(function () {
+        //到最后一页不能翻页
+        if (page >= 15) {
+            return;
+        }
+        page++;
+        load(page);
+        //修改select
+        $("option").eq(page - 1).prop('selected', 'true').siblings().removeAttr('selected');
+        console.log(page);
+
+    })
+    $('.prev').tap(function () {
+        //到第一页不能翻页了
+        if (page <= 1) {
+            return;
+        }
+        page--;
+        load(page);
+        //修改select
+        $("option").eq(page - 1).prop('selected', 'true').siblings().removeAttr('selected');
+        console.log(page);
+
+    })
+    //点击下拉框 改变页面
+
+    $('#selectPage').change(function () {
+        page = +$('#selectPage').val();
+        load(page);
+        // console.log(page);
+        // console.log(typeof page);
+    })
+    //点击 返回顶部 
+    $('.backTop').tap(function () {
+        window.scrollTo(0, 0);
+    });
+    //点击单个商品 获取获取对应的id
+    $('.items').on('tap', 'li', function () {
+        var liId = this.dataset['id'];
+        console.log(liId);
+        localStorage.setItem('id', liId);
+        localStorage.setItem('pageNum', page);
+
+    })
+        //滑动翻页事件
+        $('.items').on("swipe","li:last-child",function(){
+            load(page++);
+            console.log(page);
+           $("option").eq(page - 1).prop('selected', 'true').siblings().removeAttr('selected');
+        })
+       
+
+</script>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/gnzk.css">
+</head>
+
+<body>
+    <!--头部开始-->
+    <div class="head">
+        <div class="back">
+            <a href="javascript:void(0)"><span class="iconfont">&#xe693;</span></a>
+        </div>
+        <h1>国内折扣</h1>
+        <div class="home">
+            <a href="javascript:void(0)"></a>
+        </div>
+    </div>
+    <!--头部结束-->
+
+    <!--内容开始-->
+    <div class="container">
+        <div class="cu-friend">
+            <ul class="clearfix ulBox">
+                <!-- <li class="border-img">
+                    <a href="javascript:;">
+                        <div class="img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="title">光明 纯牛奶 250ml*24盒/箱</div>
+                        <div class="subtit">￥49.90</div>
+                        <div class="info">京东商城 | 2017/8/2 21:58</div>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <!--内容结束-->
+
+    <!--导航栏开始-->
+    <div class="nav">
+        <a href="javascript:void(0)">首页</a> &nbsp;&gt;&nbsp; 省钱快曝
+    </div>
+    <!--导航栏结束-->
+
+    <!--底部开始-->
+    <div class="footerApp">
+        <div class="foot_top">
+            <a href="javascript:void(0)">登录</a>
+            <a href="javascript:void(0)">注册</a>
+            <a href="javascript:void(0)" class="backTop">
+                <img src="./images/top.jpg" alt="">
+                返回顶部
+            </a>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="javascript:void(0)">手机APP下载</a>
+                <a href="javascript:void(0)">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <!--底部结束-->
+
+    <!--App下载开始-->
+    <div class="fixed-slow">
+        <a href="javascript:void(0)"></a>
+    </div>
+    <!--App下载结束-->
+
+    <span class="iconfont icon-fanhuidingbu1" id="gotop">&#xe64d;</span>
+</body>
+
+<!--模板-->
+<script type="text/html" id="template">
+    {{each result}}
+    <li class="border-img">
+         <i class='one'></i>
+        <i class='two'></i>
+        <i class='three'></i>
+        <i class='four'></i> 
+        <a href="javascript:;" data-id="{{$value.productId}}" onClick="delayURL('./gnxq.html')">
+            <div class="img">
+                {{@$value.productImg}}
+            </div>
+            <div class="title">{{$value.productName}}</div>
+            <div class="subtit">{{$value.productPrice}}</div>
+            <div class="info">{{$value.productFrom}} | {{$value.productTime}}</div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<script src="./js/template-web.js"></script>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/zepto/zepto.js"></script>
+<script src="./js/zepto/touch.js"></script>
+<script src="./js/zepto/event.js"></script>
+<script src="./js/gnzk.js"></script>
+
+</html>

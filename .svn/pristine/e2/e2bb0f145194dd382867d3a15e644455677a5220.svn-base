@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* 解决点击高亮*/
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/*导入基础样式*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*最外层的大盒子*/
+.qcj_cabbagePrice {
+  padding: 82px 0;
+  background-color: #f7f7f7;
+}
+/*白菜价头部 begin---------------------*/
+.cabbage_head {
+  width: 100%;
+  height: 44px;
+  background-color: #e4393c;
+  padding: 0 50px;
+  /*挤出位置放左右两个图标*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  /* 左边箭头*/
+  /*右边图片*/
+}
+.cabbage_head a {
+  height: 100%;
+  width: 50px;
+  position: absolute;
+}
+.cabbage_head .prev {
+  top: 0;
+  left: 0;
+  padding: 10px 10px;
+  color: white;
+}
+.cabbage_head h1 {
+  margin: 0;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 44px;
+}
+.cabbage_head .downLoad {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 5px 10px;
+}
+.cabbage_head .downLoad span {
+  display: block;
+  width: 34px;
+  height: 34px;
+  background-size: 34px 34px;
+  background-image: url('../images/header_app.png');
+}
+/*白菜价头部 end---------------------*/
+/*白菜价tab begin---------------------*/
+#wrapper {
+  position: fixed;
+  top: 44px;
+  width: 100%;
+  height: 38px;
+  overflow: hidden;
+  z-index: 999999;
+  background-color: white;
+}
+#wrapper #scroller {
+  width: 185%;
+  height: 38px;
+  position: absolute;
+}
+#wrapper #scroller .cabbage_tab {
+  width: 100%;
+  height: 38px;
+  background-color: #fff;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 6px;
+  /* 禁用浏览器默认的触摸行为  */
+}
+#wrapper #scroller .cabbage_tab ul {
+  width: 200%;
+  height: 38px;
+}
+#wrapper #scroller .cabbage_tab ul li {
+  float: left;
+  height: 38px;
+  line-height: 38px;
+}
+#wrapper #scroller .cabbage_tab ul li a {
+  margin: 0 12px;
+  text-decoration: none;
+}
+#wrapper #scroller .cabbage_tab .active {
+  border-bottom: 2px solid red;
+}
+#wrapper #scroller .cabbage_tab .active a {
+  color: red;
+}
+/*白菜价tab end---------------------*/
+/*白菜价body部分  begin--------------- */
+.cabbage_body {
+  border-top: 1px solid #ccc;
+  padding: 8px 0px;
+  z-index: -99999;
+}
+.cabbage_body .items {
+  width: 100%;
+}
+.cabbage_body .items ul li {
+  height: 140px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 5px 5px;
+  overflow: hidden;
+  transition: all .5s;
+  position: relative;
+}
+.cabbage_body .items ul li:hover {
+  transform: scale(0.9);
+  box-shadow: 0  0  40px lightsalmon;
+}
+.cabbage_body .items ul li .one,
+.cabbage_body .items ul li .two,
+.cabbage_body .items ul li .three,
+.cabbage_body .items ul li .four {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: pink;
+  opacity: 0;
+  transition: all .5s;
+  z-index: 9999;
+  width: 70%;
+  height: 70%;
+}
+.cabbage_body .items ul li .one {
+  top: 0;
+  left: 0;
+}
+.cabbage_body .items ul li .two {
+  top: 0;
+  right: 0;
+}
+.cabbage_body .items ul li .three {
+  bottom: 0;
+  right: 0;
+}
+.cabbage_body .items ul li .four {
+  bottom: 0;
+  left: 0;
+}
+.cabbage_body .items ul li:hover .one {
+  width: 0;
+  height: 0;
+  opacity: 1;
+}
+.cabbage_body .items ul li:hover .two {
+  width: 0;
+  height: 0;
+  opacity: 1;
+}
+.cabbage_body .items ul li:hover .three {
+  width: 0;
+  height: 0;
+  opacity: 1;
+}
+.cabbage_body .items ul li:hover .four {
+  width: 0;
+  height: 0;
+  opacity: 1;
+}
+.cabbage_body .items .picture {
+  width: 130px;
+  height: 130px;
+  margin-right: 5px;
+  float: left;
+}
+.cabbage_body .items .picture img {
+  width: 100%;
+  height: 100%;
+}
+.cabbage_body .items .right .top {
+  margin-bottom: 5px;
+}
+.cabbage_body .items .right .top div {
+  color: red;
+}
+.cabbage_body .items .right .top div:nth-child(1) {
+  display: block;
+  margin-bottom: 5px;
+  color: #000;
+  height: 40px;
+}
+.cabbage_body .items .right .top div:nth-child(2) {
+  font-size: 20px;
+}
+.cabbage_body .items .right .top div:nth-child(2) i,
+.cabbage_body .items .right .top div:nth-child(2) del {
+  font-style: normal;
+  font-size: 14px;
+  margin-right: 5px;
+}
+.cabbage_body .items .right .top div:nth-child(2) em {
+  font-style: normal;
+  font-size: 12px;
+}
+.cabbage_body .items .right .top div:nth-child(2) del {
+  margin-left: 10px;
+  color: #999;
+}
+.cabbage_body .items .right .bottom {
+  position: relative;
+  height: 50px;
+  margin-top: 5px;
+}
+.cabbage_body .items .right .bottom .bar {
+  width: 80px;
+  position: relative;
+}
+.cabbage_body .items .right .bottom .bar i {
+  position: absolute;
+  left: 135px;
+  width: 80px;
+  height: 15px;
+  line-height: 15px;
+  background-color: #ffb7b7;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.cabbage_body .items .right .bottom .bar i em {
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  border: 1px solid red;
+}
+.cabbage_body .items .right .bottom .bar i span {
+  position: absolute;
+  left: 27px;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+}
+.cabbage_body .items .right .bottom .bar b {
+  color: red;
+  font-weight: normal;
+  font-size: 12px;
+  position: absolute;
+  right: -220px;
+}
+.cabbage_body .items .right .bottom .discount {
+  position: absolute;
+  left: 135px;
+  bottom: 0;
+  width: 120px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 12px;
+  border: 1px dashed red;
+  color: red;
+  margin-top: 10px;
+}
+.cabbage_body .items .right .bottom .productHref {
+  width: 70px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #ff5e5d;
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+}
+/*白菜价body部分  end--------------- */
+/*白菜价foot部分  begin--------------- */
+.cabbage_foot {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999999;
+  background-color: #f7f7f7;
+}
+.cabbage_foot ul {
+  height: 40px;
+  margin-bottom: 20px;
+}
+.cabbage_foot ul li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  border-left: none;
+}
+.cabbage_foot p {
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+}
+.cabbage_foot p a {
+  display: inline-block;
+  width: 17.5%;
+  text-decoration: none;
+}
+.cabbage_foot p a:nth-child(1) {
+  color: red;
+}
+.cabbage_foot p span {
+  color: #737373;
+}
+.cabbage_foot .website {
+  color: #737373;
+}
+.cabbage_foot #gotop {
+  position: absolute;
+  right: 15px;
+  top: -60px;
+  font-size: 40px;
+  opacity: .6;
+  z-index: 9999999;
+}
+/*白菜价foot部分  end--------------- */

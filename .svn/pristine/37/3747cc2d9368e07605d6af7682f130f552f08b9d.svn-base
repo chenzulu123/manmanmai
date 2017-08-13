@@ -1,0 +1,7 @@
+/* 担心有些ie浏览器 不识别 媒体查询 only   */
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+  html,
+  body {
+    font-size: 100px;
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/moneyctrl.css">
+  
+</head>
+ 
+<body>
+    <div class="view">
+        <!--头部-->
+        <div class="MMB_header">
+            <!--返回首页按钮-->
+            <a href="./index.html">
+                <i class="iconfont">&#xe604;</i>
+            </a> 省钱控 - 最新优惠
+            <img src="./images/header_app.png" alt="">
+        </div>
+
+        <!--列表开始-->
+        <div class="list">
+            <ul class="listMenu" id="listUl">
+
+            </ul>
+
+        </div>
+
+        <!--翻页-->
+        <div class="MMB_bottom">
+            <div class="box clearFix">
+                <input type="button" value="上一页" id="btnUp" />
+                <select name="" id="se">
+                    
+                        </select>
+                <input type="button" value="下一页" id="btnDown" />
+            </div>
+
+            <div class="nav">
+                <a href="./index.html">首页 > </a>&nbsp;&nbsp;省钱控
+            </div>
+
+        </div>
+        <!--底部-->
+        <footer>
+            <ul class="clearFix">
+                <li><a href="###">登录</a></li>
+                <li><a href="###">注册</a></li>
+                <li><a href="#top"><i class="iconfont">&#xe69e;</i></i><span>返回顶部</span></a></li>
+            </ul>
+            <div class="down">
+                <p><span>手机APP下载&nbsp;</span>慢慢买手机版<span>&nbsp;--&nbsp;掌上比价平台</span></p>
+                <span>m.manmanbuy.com</span>
+            </div>
+        </footer>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/template-web.js"></script>
+<script src="./js/itcastEvent.js"></script>
+
+<script type='text/html' id='template'>
+    {{each result}}
+    <li class="clearfix ">
+         <i class='one'></i>
+        <i class='two'></i>
+        <i class='three'></i>
+        <i class='four'></i> 
+        <!-- <a href="./inlandList.html?id={{$value.productId}}" > -->
+        <a href="javascript:;" onClick="delayURL('./inlandList.html?id={{$value.productId}}')">
+
+            <div class="pic">
+                {{@$value.productImg2}}
+            </div>
+            <div class="info">
+                <div class="title">
+                    {{$value.productName}} 
+                    <span> {{$value.productPinkage}}</span>
+                </div>
+                <div class="other clearfix">
+                    <span class="mall">  {{$value.productFrom}} | {{$value.productTime}}</span>
+                    <span class="comment"> <i class="iconfont">&#xe60b;</i>{{$value.productComCount.slice($value.productComCount.indexOf("有")+1,$value.productComCount.indexOf('人'))}}</span>
+                </div>
+            </div>
+        </a>
+
+    </li> 
+    {{/each}}
+</script>
+<script src="./js/moneyctrl.js"></script>

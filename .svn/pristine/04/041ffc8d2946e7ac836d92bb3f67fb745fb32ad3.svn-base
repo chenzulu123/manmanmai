@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/inlandList.css">
+</head>
+<body>
+    <div class="view">
+        <!--头部-->
+        <div class="MMB_header">
+            <!--返回首页按钮-->
+            <a href="./moneyctrl.html">
+                 <i class="iconfont">&#xe604;</i>
+            </a>
+
+
+            国内折扣
+            <img src="./images/header_app.png" alt="">
+        </div>
+        <!--内容-->
+        <div class="container" id="mmb_container">
+            <!--<div class="cu-content-pl ui-border-t">
+            <div class="tit">发表评论</div>
+            <div class="reply">
+                <div class="form">
+                    <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
+                    <input name="ctl00$ContentBody$lbl_fbr" id="ctl00_ContentBody_lbl_fbr" value="手机端网友14***154" type="hidden">
+                    <input name="ctl00$ContentBody$hid_name" id="ctl00_ContentBody_hid_name" value="预售：PHILIPS 飞利浦 328P6VJEB 31.5英寸 显示器" type="hidden">
+                    <div class="ctrl">
+                        <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp" type="submit">
+                    </div>
+                </div>
+            </div>
+            <div class="tit" id="newcomment">最新评论</div>
+            <div class="list">
+                <ul>
+                    <li class="ui-border-b">
+                        <div class="userimg"><img src="http://home.manmanbuy.com/upface/face/1471910984_162.jpg"></div>
+                        <div class="con">
+                            <div class="name clearfix">
+                                <div class="username">放肆的青春</div>
+                                <div class="time">2016/10/25 11:18:49</div>
+                            </div>
+                            <div class="content">了不起了不起，都可以买台一体机了</div>
+                        </div>
+                    </li>
+                    <li class="ui-border-b">
+                        <div class="userimg"><img src="http://qzapp.qlogo.cn/qzapp/218180/A51F5E07788447AE992879A53600CE94/30"></div>
+                        <div class="con">
+                            <div class="name clearfix">
+                                <div class="username">F</div>
+                                <div class="time">2016/10/25 9:50:48</div>
+                            </div>
+                            <div class="content">40寸的显示器飞利浦有好吗……自己先做做功课
+                                <div class="yinyong"><span style="color:#5799CC;">引用 @uh8uagf：</span>我一年前买的40寸 4k飞利浦也才4000左右...
+                                    <div class="yinyong"><span style="color:#5799CC;">引用 @w叫我解读小王子：</span>您那是电视机吧
+                                        <div class="yinyong"><span style="color:#5799CC;">引用 @制片人：</span>为什么老有人拿电视机和显示器比……拿电视机当显示器那是会瞎的！</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ui-border-b">
+                        <div class="userimg"><img src="http://home.manmanbuy.com/upface/face/1466053470_162.jpg"></div>
+                        <div class="con">
+                            <div class="name clearfix">
+                                <div class="username">制片人</div>
+                                <div class="time">2016/10/25 9:31:01</div>
+                            </div>
+                            <div class="content">为什么老有人拿电视机和显示器比……拿电视机当显示器那是会瞎的！
+                                <div class="yinyong"><span style="color:#5799CC;">引用 @uh8uagf：</span>我一年前买的40寸 4k飞利浦也才4000左右...
+                                    <div class="yinyong"><span style="color:#5799CC;">引用 @w叫我解读小王子：</span>您那是电视机吧</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ui-border-b">
+                        <div class="userimg"><img src="http://apapia_userface.manmanbuy.com/images/userface/2016081212512392.jpg"></div>
+                        <div class="con">
+                            <div class="name clearfix">
+                                <div class="username">w叫我解读小王子</div>
+                                <div class="time">2016/10/25 9:28:28</div>
+                            </div>
+                            <div class="content">您那是电视机吧
+                                <div class="yinyong"><span style="color:#5799CC;">引用 @uh8uagf：</span>我一年前买的40寸 4k飞利浦也才4000左右...</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ui-border-b">
+                        <div class="userimg"><img src="http://home.manmanbuy.com/upface/face/1465864206_162.jpg"></div>
+                        <div class="con">
+                            <div class="name clearfix">
+                                <div class="username">uh8uagf</div>
+                                <div class="time">2016/10/25 9:23:38</div>
+                            </div>
+                            <div class="content">我一年前买的40寸 4k飞利浦也才4000左右...</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+
+
+
+        </div>
+
+
+        <!--翻页-->
+        <div class="MMB_bottom">
+            <div class="box ">
+                已经是最后一页！
+            </div>
+
+            <div class="nav">
+                <a href="./index.html">首页 > </a>&nbsp;&nbsp;省钱控
+            </div>
+
+        </div>
+
+
+        <!--底部-->
+        <footer>
+            <ul class="clearFix">
+                <li><a href="###">登录</a></li>
+                <li><a href="###">注册</a></li>
+                <li><a href="#top" class="glyphicon glyphicon-arrow-up"><i class="iconfont">&#xe69e;</i><span>返回顶部</span></a></li>
+            </ul>
+            <div class="down">
+                <p><span>手机APP下载&nbsp;</span>慢慢买手机版<span>&nbsp;--&nbsp;掌上比价平台</span></p>
+                <span>m.manmanbuy.com</span>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+<script src="./js/jquery-1.11.3.min.js"></script>   
+<script src="./js/template-web.js"></script>
+
+<script type='text/html' id='template'>
+    <div class="cu-content">
+        <h3 class="title">{{productName}}</h3>
+        <h4>{{productPinkage}}</h4>
+        <div class="info">
+            <span class="mall">{{productFrom}}</span>
+            <span class="addtime">{{productTime}}</span>
+            <span class="author">&nbsp;{{productTips}}</span>
+            <span><a href="javascript:;">{{productComCount}}</a></span>
+
+        </div>
+        <div class="content clearfix">
+            <div class="picwrap">
+                {{@productImgSm}}
+            </div>
+            <div class="conn">
+                <p>{{productInfo}}</p>
+                <br>
+                <p>{{productInfo1}}</p>
+                  <br>
+                <p> {{productInfo2}}
+                </p>
+                  <br>
+                {{@productImgSm}}
+                <!--{{@productCity}} -->
+
+
+            </div>
+
+        </div>
+        <!--<br>-->
+        <div class="golink">
+            <a href="javascript:;">
+                   <i class="iconfont">&#xe631;</i>
+                    前往购买
+                </a>
+        </div>
+    </div>
+    {{@productComment}}
+
+
+</script>
+<script src="./js/inlandList.js"></script>

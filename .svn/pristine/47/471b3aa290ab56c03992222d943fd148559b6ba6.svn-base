@@ -1,0 +1,28 @@
+$(function () {
+    // 获取页面上的id的方法
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+    //获取跳转信息的方法
+    function getDiscountList() {
+        $.ajax({
+            url: 'http://139.199.192.48:9090/api/getmoneyctrl',
+            success: function (data) {
+                //获取url传递的id值
+                var id = getUrlParam('id');
+                for (var i = 0; i < data.result.length; i++) {
+                    if (data.result[i].productId == id) {
+                        //渲染模板页面
+                        $('.container').html(template('template', data.result[i]));
+                    }
+                }
+            }
+        })
+    }
+    getDiscountList();
+})
+
+// index.html?id={{$value.id}}

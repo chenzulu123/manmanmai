@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>qcj_cabbage_提交版</title>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./css/qcj_cabbage.css">
+</head>
+
+<body >
+    <!--最外层大盒子  -->
+    <div class="qcj_cabbagePrice">
+        <!-- 白菜价头部 begin  -->
+        <div class="cabbage_head">
+            <a class="prev" href="javascript:;"><span class="iconfont icon-iconfontfanhui"></span></a>
+            <h1>白菜价-淘宝内部券</h1>
+            <a class="downLoad" href="javascript:;"><span></span></a>
+        </div>
+        <!-- 白菜价头部 end  -->
+        <!-- 白菜价tab栏 begin  -->
+        <div id="wrapper">
+            <div id="scroller">
+                <div class="cabbage_tab "></div>
+            </div>
+        </div>
+        <!-- 白菜价tab栏 end  -->
+        <!-- 白菜价body部分  begin  -->
+        <div class="cabbage_body ">
+        </div>
+        <!-- 白菜价body部分  end  -->
+        <!-- 白菜价底部foot begin -->
+        <div class="cabbage_foot">
+            <ul class="clearfix">
+                <li><a href="javascript:;">登录</a></li>
+                <li><a href="javascript:;">注册</a></li>
+                <li class="backTop"><a href="javascript:;"> <span class="iconfont icon-fanhuidingbu3"></span>返回顶部</a></li>
+            </ul>
+            <p>
+                <a href="javascript:;">手机app下载</a>
+                <a href="javascript:;">慢慢买手机版</a>
+                <span>--掌上比价平台</span>
+            </p>
+            <p class="website">m.manmanbuy.com</p>
+            <span class="iconfont icon-fanhuidingbu1" id="gotop"></span>
+        </div>
+        <!-- 白菜价底部foot end -->
+    </div>
+</body>
+
+</html>
+<!--导入jQuery包  -->
+<!-- <script  src="./js/jquery.1.12.4.js"></script> -->
+<!-- <script  src="./js/bootstrap.min.js"></script> -->
+<script src="./js/zepto.js"></script>
+<script src="./js/event.js"></script>
+<script src="./js/touch.js"></script>
+<script src="./js/ajax.js"></script>
+<script src="./js/template-web.js"></script>
+<script src="./js/iscroll.js"></script>
+<script src="./js/itcastEvent.js"></script>
+<script src="./js/zepto/fx.js"></script>
+
+<!--导入自己的js包  -->
+<script src="./js/qcj_cabbage.js"></script>
+
+<!--创建模板 获取标题内容  -->
+<script type="text/html" id="templateTitle">
+    <div class="scroller">
+        <ul>
+            {{each result}}
+            <li data-num="{{$value.titleId}}"><a href="javascript:;">{{$value.title}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+</script>
+<!--创建模板 获取页面内容  -->
+<script type="text/html" id="templateProduct">
+    <div class="items">
+        <ul>
+            {{each result}}
+            <li class="clearfix">
+                <div class="picture">
+                    {{@ $value.productImg}}
+                </div>
+                <div class="right">
+                    <div class="top">
+                        <div>{{@ $value.productName}}</div>
+                        <div>{{@ $value.productPrice}}</div>
+                    </div>
+                    <div class="bottom">
+                        <!-- 进度条  -->
+                        {{@ $value.productCouponRemain}}
+                        <div class="discount ">{{@ $value.productCoupon}}</div>
+                        <div class="productHref">{{@ $value.productHref}}</div>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</script>

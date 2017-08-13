@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/zepto/zepto.js"></script>
+    <script src="./js/zepto/ajax.js"></script>
+    <script src="./js/zepto/event.js"></script>
+    <script src="./js/zepto/touch.js"></script>
+    <script src="./js/zepto/fx.js"></script>
+    <script src="./js/zepto/fx_methods.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/template.js"></script>
+    <link rel="stylesheet" href="./css/template.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <title>超级折扣推荐</title>
+</head>
+
+<body>
+    <!--头部开始-->
+    <a id="dingbu"></a>
+    <div class="head">
+        <div class="back">
+            <a href="./index.html" class="iconfont icon-iconfontfanhui"></a>
+        </div>
+        <span>超级折扣推荐</span>
+        <div class="home">
+            <img src="./images/header_app.png" alt="app下载">
+        </div>
+    </div>
+    <div class="container">
+    </div>
+    <!--内容结束-->
+    <!--导航栏开始-->
+    <div class="nav">
+    </div>
+    <!--导航栏结束-->
+    <!--底部开始-->
+    <div class="footerApp">
+        <div class="foot_top">
+            <a href="javascript:void(0)">登录</a>
+            <a href="javascript:void(0)">注册</a>
+            <a href="javascript:void(0);" class="backTop">
+                <img src="./images/top.jpg" alt="">
+                返回顶部
+            </a>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="javascript:void(0)">手机APP下载</a>
+                <a href="javascript:void(0)">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <!--底部结束-->
+    <!--App下载开始-->
+    <div class="fixed-slow">
+        <a href="javascript:void(0)"></a>
+    </div>
+    <!--App下载结束-->
+</body>
+<!--模板-->
+<script type="text/html" id="template">
+    <div class="cu_ontent">
+        <h3>{{productName}}</h3>
+        <h4>{{productPinkage}}</h4>
+        <div class="info">
+            <span class="mall">{{productFrom}}</span>
+            <span class="addtime">{{productTime}}</span>
+            <span class="author">{{productTips}}</span>
+        </div>
+        <div class="content clearfix">
+            <div class="picwrap">
+                {{@productImgSm}}
+            </div>
+            <div class="conn">
+                <p>
+                    促销类型:&nbsp;[用券]
+                    <a href="javascript:void(0)">50.00元满减券</a>
+                </p>
+                <p>{{productInfo}}</p>
+            </div>
+        </div>
+        <div class="golink">
+            <a href="javascript:void(0)">前往购买</a>
+        </div>
+    </div>
+    <div class="comment">{{@productComment}}</div>
+</script>
+<!--模板2-->
+<script type="text/html" id="template1">
+    <a href="javascript:void(0)">首页</a> &nbsp;&gt;&nbsp;
+    <a href="javascript:void(0)">超值推荐</a> &nbsp;&gt;&nbsp; {{productName.slice(0,10)}}
+</script>
+<script>
+    //获取html元素
+    var html = document.getElementsByTagName('html')[0];
+    //屏幕的宽度（兼容处理）
+    var w = document.documentElement.clientWidth || document.body.clientWidth;
+    //750这个数字是根据你的设计图的实际大小来的，所以值具体根据设计图的大小
+    html.style.fontSize = w / 6.4 + "px";
+</script>
+
+</html>

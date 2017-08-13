@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/fonts/arrow/iconfont.css">
+    <link rel="stylesheet" href="./lib/fonts/xiaoxi/iconfont.css">
+    <link rel="stylesheet" href="./lib/fonts/car/iconfont.css">
+    <link rel="stylesheet" href="./css/haitao_info.css">
+</head>
+<body>
+    <!--头部-->
+    <div class="head">
+        <div class="back">
+            <a href="./haitao.html" class="iconfont icon-arrowleft"></a>
+        </div>
+        <h1>海淘折扣</h1>
+        <div class="home">
+            <a href="javascript:void(0)"></a>   
+        </div>
+    </div>
+    <!--主体部分-->
+    <div class="container">
+        <!--<div class="cu-content">
+            <h3>凑单品：McFARLANE TOYS 麦克法兰 权力的游戏 铁王座大厅场景 拼装模型</h3>
+            <h4>$16.61（约￥111.6）</h4>
+            <div class="info">
+                <span class="mall">美国亚马逊</span>
+                <span class="addtime">08-03 19:07</span>
+                <span class="author">Lancer/慢慢买</span>
+            </div>
+            <div class="content">
+                <img src="./images/sm.jpg" alt="">
+                <p>麦克法兰是漫画家托德·麦克法兰建立的玩具品牌，以做工精细、外形前卫著称，并且与流行娱乐中的热点结合紧密。这款权力的游戏 铁王座大厅由HBO授权生产，包含一个铁王座，两个大烛台，整块石头地面，彩绘玻璃窗等，人物包含拜拉席恩和卫队成员，含314块颗粒。</p>
+                <p>美国亚马逊此款铁王座积木目前历史好价16.61美元，约合人民币111.6元，自留或送朋友都是非常不错的选择，权力粉不容错过~</p>
+                
+            </div>
+            <div class="lg_img"><img src="./images/lg.jpg" alt=""></div>
+
+        </div>-->
+        <!--前往购物车-->
+        <!--<div class="goLink">
+            <a href="javascript:void(0)"><span class="iconfont icon-gouwuche"></span>前往购物车</a>
+        </div>-->
+    </div>
+        <!--评论区域-->
+        <div class="cu-content">
+            <p>发表评论</p>
+            <div class="reply">
+                <div class="form">
+                    <textarea name="txt" id="txt" cols="30" rows="5"></textarea>
+                    <div class="ctrl">
+                        <input type="submit" value="发表评论" class="comments">
+                    </div>
+                </div>
+            </div>
+            <p>热门评论</p>
+            <p>最新评论</p>
+            <div class="com-list">
+                <ul class="listUl">
+                    <!--<li>
+                        <img src="./images/none.gif">
+                        <div class="com">
+                            <div class="com-name clearfix">
+                                <span class="userName fl">手机端网友183***222</span>
+                                <span class="time fr">2017/8/4 15:13:33</span>
+                                
+                            </div>
+                            <p class="content">陈俏是变态，陈俏是变态，陈俏是变态</p>
+                           
+                        </div>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+         <!--底部分页-->
+        <div class="page">
+               已经是最后一页了
+        </div>
+        
+    
+    <!--底部导航栏-->
+    <div class="foot_menu">
+        
+    </div>
+    <!--底部部分-->
+    <div class="footerApp">
+        <div class="foot_top">
+            <a href="javascript:void(0)">登录</a>
+            <a href="javascript:void(0)">注册</a>
+            <a class="backTop" href="javascript:void(0)"><img src="./images/top.jpg" alt="">返回顶部</a>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="javascript:void(0)">手机APP下载</a>
+                <a href="javascript:void(0)">慢慢买手机版</a>
+                 -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com 
+            </p>
+        </div>
+    </div>
+    <div class="fixImg">
+       <a href="javascript:void(0)">
+            <img src="./images/app.png" alt="">
+       </a>
+    </div>
+</body>
+</html>
+<!--定义模板-->
+<script type="text/html" id="template">
+    <div class="cu-content">
+            <h3>{{productName}}</h3>
+            <h4>{{productPinkage}}</h4>
+            <div class="info">
+                <span class="mall">{{productPinkage}}</span>
+                <span class="addtime">{{productTime}}</span>
+                <span class="author">{{productTips}}</span>
+            </div>
+            <div class="content">
+                {{@productImgSm}}
+                <p>{{productInfo1}}</p>
+                <p>{{productInfo2}}</p>
+                
+            </div>
+            <div class="lg_img">{{@productImgLg}}</div>
+            <div class="goLink">
+            <a href="javascript:void(0)"><span class="iconfont icon-gouwuche"></span>前往购物车</a>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="template1">
+        <a href="javascript:void(0)">首页</a>
+        &gt;
+        <a href="javascript:void(0)">省钱控</a>
+        &gt;
+        <a href="./haitao.html">海淘折扣</a>
+        &gt;
+        {{productName.slice(0,10)}}...
+</script>
+
+<!--引入zepto文件包-->
+<script src="./lib/zepto/zepto.js"></script>
+<!--点击事件tap-->
+<script src="./lib/zepto/event.js"></script>
+<script src="./lib/zepto/touch.js"></script>
+<!--ajax请求-->
+<script src="./lib/zepto/ajax.js"></script>
+<!--<script src="./lib/zepto/fx.js"></script>-->
+<script src="./lib/js/template-web.js"></script>
+<script>
+    //加载默认页面
+   $(function(){
+       var liId =window.localStorage.getItem('id');
+       var page =window.localStorage.getItem('pageNum');
+       console.log(liId);
+       $.ajax({
+            url:'http://139.199.192.48:9090/api/getmoneyctrl',
+            type:'get',
+            data:{
+                pageid:page
+            },
+            success:function(data){
+                for (var i = 0; i < data.result.length; i++) {
+                    if(data.result[i].productId==liId){
+                        $(".container").append(template("template",data.result[i]));
+                        $(".foot_menu").append(template("template1",data.result[i]));
+
+                console.log(data.result[i]);
+                    
+                }
+            }
+            }
+        });
+   });
+   //写评论
+   $('.comments').tap(function(){
+      var arr1 = new Date().toLocaleString().split('/');
+      var arr2 = new Date().toLocaleString();
+        var myDate = new Date();
+                var year = myDate.getFullYear();
+                var month = myDate.getMonth() + 1;
+                var date = myDate.getDate();
+                var h = myDate.getHours();
+                var m = myDate.getMinutes();
+                var s = myDate.getSeconds();
+                if (h < 10) {
+                    h = '0' + h;
+                }
+                if (m < 10) {
+                    m = '0' + m;
+                }
+                if (s < 10) {
+                    s = '0' + s;
+                }
+      
+       if ($('textarea').val().trim() == '') {
+                    alert('请填写内容');
+                    return;
+        }
+        var html = '<li>'+
+                       '<img src="./images/smile'+parseInt(Math.random()*5+1)+'.jpg">'+
+                       '<div class="com">'+
+                       '    <div class="com-name clearfix">'+
+                       '        <span class="userName fl">手机端网友183***222</span>'+
+                       '        <span class="time fr">'+year + '/' + month + '/' + date + ' ' + h + ':' + m + ':' + s+'</span>'+
+                       '    </div>'+
+                       '    <p class="content">'+$('textarea').val().trim()+'</p>'+
+                       '</div>'+
+                    '</li>';
+         $('.listUl').append(html);
+        $('textarea').val('');
+    
+   });
+   
+   
+   
+
+
+</script>
